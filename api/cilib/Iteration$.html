@@ -51,7 +51,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/cirg-up/cilib/tree/master/core/src/main/scala/cilib/Iteration.scala" target="_blank">Iteration.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
@@ -182,18 +182,18 @@
     </span>
       
     </li><li name="cilib.Iteration#asyncS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="asyncS[A,S,B](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,B])):scalaz.Kleisli[[γ]scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,γ],List[B],List[B]]"></a>
-      <a id="asyncS[A,S,B]((List[B])⇒(B)⇒StepS[A,S,B]):Kleisli[[γ]IndexedStateT[[β]Step[A,β],S,S,γ],List[B],List[B]]"></a>
+      <a id="asyncS[A,S,B](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,B])):scalaz.Kleisli[[γ]cilib.StepS[A,S,γ],List[B],List[B]]"></a>
+      <a id="asyncS[A,S,B]((List[B])⇒(B)⇒StepS[A,S,B]):Kleisli[[γ]StepS[A,S,γ],List[B],List[B]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">asyncS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.asyncS.B">B</span>]) ⇒ (<span class="extype" name="cilib.Iteration.asyncS.B">B</span>) ⇒ <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.Iteration.asyncS.A">A</span>, <span class="extype" name="cilib.Iteration.asyncS.S">S</span>, <span class="extype" name="cilib.Iteration.asyncS.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scalaz.Kleisli">Kleisli</span>[[γ]<span class="extype" name="scalaz.IndexedStateT">IndexedStateT</span>[[β]<a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.Iteration.asyncS.A">A</span>, <span class="extype" name="cilib.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.Iteration.asyncS.S">S</span>, <span class="extype" name="cilib.Iteration.asyncS.S">S</span>, <span class="extype" name="cilib.Iteration.&lt;refinement&gt;.Λ$.γ">γ</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.asyncS.B">B</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.asyncS.B">B</span>]]</span>
+        <span class="name">asyncS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.asyncS.B">B</span>]) ⇒ (<span class="extype" name="cilib.Iteration.asyncS.B">B</span>) ⇒ <a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.Iteration.asyncS.A">A</span>, <span class="extype" name="cilib.Iteration.asyncS.S">S</span>, <span class="extype" name="cilib.Iteration.asyncS.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scalaz.Kleisli">Kleisli</span>[[γ]<a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.Iteration.asyncS.A">A</span>, <span class="extype" name="cilib.Iteration.asyncS.S">S</span>, <span class="extype" name="cilib.Iteration.&lt;refinement&gt;.Λ$.γ">γ</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.asyncS.B">B</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.asyncS.B">B</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#cilib.Iteration$@asyncS[A,S,B](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,B])):scalaz.Kleisli[[γ]scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,γ],List[B],List[B]]" title="Permalink" target="_top">
+      <a href="../index.html#cilib.Iteration$@asyncS[A,S,B](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,B])):scalaz.Kleisli[[γ]cilib.StepS[A,S,γ],List[B],List[B]]" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -415,18 +415,18 @@
     </span>
       
     </li><li name="cilib.Iteration#syncS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="syncS[A,S,B,C](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])):scalaz.Kleisli[[γ]scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,γ],List[B],List[C]]"></a>
-      <a id="syncS[A,S,B,C]((List[B])⇒(B)⇒StepS[A,S,C]):Kleisli[[γ]IndexedStateT[[β]Step[A,β],S,S,γ],List[B],List[C]]"></a>
+      <a id="syncS[A,S,B,C](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])):scalaz.Kleisli[[γ]cilib.StepS[A,S,γ],List[B],List[C]]"></a>
+      <a id="syncS[A,S,B,C]((List[B])⇒(B)⇒StepS[A,S,C]):Kleisli[[γ]StepS[A,S,γ],List[B],List[C]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">syncS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.syncS.B">B</span>]) ⇒ (<span class="extype" name="cilib.Iteration.syncS.B">B</span>) ⇒ <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.Iteration.syncS.A">A</span>, <span class="extype" name="cilib.Iteration.syncS.S">S</span>, <span class="extype" name="cilib.Iteration.syncS.C">C</span>]</span>)</span><span class="result">: <span class="extype" name="scalaz.Kleisli">Kleisli</span>[[γ]<span class="extype" name="scalaz.IndexedStateT">IndexedStateT</span>[[β]<a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.Iteration.syncS.A">A</span>, <span class="extype" name="cilib.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.Iteration.syncS.S">S</span>, <span class="extype" name="cilib.Iteration.syncS.S">S</span>, <span class="extype" name="cilib.Iteration.&lt;refinement&gt;.Λ$.γ">γ</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.syncS.B">B</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.syncS.C">C</span>]]</span>
+        <span class="name">syncS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.syncS.B">B</span>]) ⇒ (<span class="extype" name="cilib.Iteration.syncS.B">B</span>) ⇒ <a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.Iteration.syncS.A">A</span>, <span class="extype" name="cilib.Iteration.syncS.S">S</span>, <span class="extype" name="cilib.Iteration.syncS.C">C</span>]</span>)</span><span class="result">: <span class="extype" name="scalaz.Kleisli">Kleisli</span>[[γ]<a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.Iteration.syncS.A">A</span>, <span class="extype" name="cilib.Iteration.syncS.S">S</span>, <span class="extype" name="cilib.Iteration.&lt;refinement&gt;.Λ$.γ">γ</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.syncS.B">B</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.Iteration.syncS.C">C</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#cilib.Iteration$@syncS[A,S,B,C](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])):scalaz.Kleisli[[γ]scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,γ],List[B],List[C]]" title="Permalink" target="_top">
+      <a href="../index.html#cilib.Iteration$@syncS[A,S,B,C](f:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])):scalaz.Kleisli[[γ]cilib.StepS[A,S,γ],List[B],List[C]]" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

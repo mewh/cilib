@@ -28,10 +28,12 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img alt="Object" src="../lib/object_big.png" />
+        <a href="StepS.html" title="See companion class"><img alt="Object/Class" src="../lib/object_to_class_big.png" /></a>
         <p id="owner"><a href="package.html" class="extype" name="cilib">cilib</a></p>
-        <h1>StepS</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="cilib">package cilib</a>
+        <h1><a href="StepS.html" title="See companion class">StepS</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="StepS.html" title="See companion class">class StepS</a>
+            | <a href="package.html" class="extype" name="cilib">package cilib</a>
           </div></span></h3><span class="permalink">
       <a href="../index.html#cilib.StepS$" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
@@ -45,13 +47,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">StepS</span>
+        <span class="name">StepS</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/cirg-up/cilib/tree/master/core/src/main/scala/cilib/Step.scala" target="_blank">Step.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -69,7 +71,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="cilib.StepS"><span>StepS</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="cilib.StepS"><span>StepS</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -154,7 +156,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="cilib.StepS.apply.S">S</span>) ⇒ <a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.StepS.apply.A">A</span>, (<span class="extype" name="cilib.StepS.apply.S">S</span>, <span class="extype" name="cilib.StepS.apply.B">B</span>)]</span>)</span><span class="result">: <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.apply.A">A</span>, <span class="extype" name="cilib.StepS.apply.S">S</span>, <span class="extype" name="cilib.StepS.apply.B">B</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="cilib.StepS.apply.S">S</span>) ⇒ <a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.StepS.apply.A">A</span>, (<span class="extype" name="cilib.StepS.apply.S">S</span>, <span class="extype" name="cilib.StepS.apply.B">B</span>)]</span>)</span><span class="result">: <a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.apply.A">A</span>, <span class="extype" name="cilib.StepS.apply.S">S</span>, <span class="extype" name="cilib.StepS.apply.B">B</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../index.html#cilib.StepS$@apply[A,S,B](f:S=&gt;cilib.Step[A,(S,B)]):cilib.StepS[A,S,B]" title="Permalink" target="_top">
@@ -259,23 +261,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="cilib.StepS#get" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="get[A,S]:scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,S]"></a>
-      <a id="get[A,S]:IndexedStateT[[β]Step[A,β],S,S,S]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">get</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>]</span><span class="result">: <span class="extype" name="scalaz.IndexedStateT">IndexedStateT</span>[[β]<a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.StepS.get.A">A</span>, <span class="extype" name="cilib.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.StepS.get.S">S</span>, <span class="extype" name="cilib.StepS.get.S">S</span>, <span class="extype" name="cilib.StepS.get.S">S</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../index.html#cilib.StepS$@get[A,S]:scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,S]" title="Permalink" target="_top">
-        <img src="../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -327,6 +312,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="cilib.StepS#lensIso" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="lensIso[A,B]:monocle.Iso[scalaz.Lens[A,B],monocle.Lens[A,B]]"></a>
+      <a id="lensIso[A,B]:Iso[Lens[A,B],Lens[A,B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lensIso</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result">: <span class="extype" name="monocle.Iso">Iso</span>[<a href="../scalaz/package.html#Lens[A,B]=scalaz.LensFamily[A,A,B,B]" class="extmbr" name="scalaz.Lens">Lens</a>[<span class="extype" name="cilib.StepS.lensIso.A">A</span>, <span class="extype" name="cilib.StepS.lensIso.B">B</span>], <span class="extype" name="monocle.Lens">Lens</span>[<span class="extype" name="cilib.StepS.lensIso.A">A</span>, <span class="extype" name="cilib.StepS.lensIso.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#cilib.StepS$@lensIso[A,B]:monocle.Iso[scalaz.Lens[A,B],monocle.Lens[A,B]]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="cilib.StepS#liftK" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="liftK[A,S,B](a:scalaz.Reader[cilib.Comparison,B]):cilib.StepS[A,S,B]"></a>
       <a id="liftK[A,S,B](Reader[Comparison,B]):StepS[A,S,B]"></a>
@@ -336,7 +338,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">liftK</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="../scalaz/package.html#Reader[E,A]=scalaz.package.ReaderT[scalaz.Id.Id,E,A]" class="extmbr" name="scalaz.Reader">Reader</a>[<a href="Comparison.html" class="extype" name="cilib.Comparison">Comparison</a>, <span class="extype" name="cilib.StepS.liftK.B">B</span>]</span>)</span><span class="result">: <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.liftK.A">A</span>, <span class="extype" name="cilib.StepS.liftK.S">S</span>, <span class="extype" name="cilib.StepS.liftK.B">B</span>]</span>
+        <span class="name">liftK</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="../scalaz/package.html#Reader[E,A]=scalaz.package.ReaderT[scalaz.Id.Id,E,A]" class="extmbr" name="scalaz.Reader">Reader</a>[<a href="Comparison.html" class="extype" name="cilib.Comparison">Comparison</a>, <span class="extype" name="cilib.StepS.liftK.B">B</span>]</span>)</span><span class="result">: <a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.liftK.A">A</span>, <span class="extype" name="cilib.StepS.liftK.S">S</span>, <span class="extype" name="cilib.StepS.liftK.B">B</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../index.html#cilib.StepS$@liftK[A,S,B](a:scalaz.Reader[cilib.Comparison,B]):cilib.StepS[A,S,B]" title="Permalink" target="_top">
@@ -353,7 +355,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">liftS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="../scalaz/package.html#State[S,A]=scalaz.package.StateT[scalaz.Id.Id,S,A]" class="extmbr" name="scalaz.State">State</a>[<span class="extype" name="cilib.StepS.liftS.S">S</span>, <span class="extype" name="cilib.StepS.liftS.B">B</span>]</span>)</span><span class="result">: <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.liftS.A">A</span>, <span class="extype" name="cilib.StepS.liftS.S">S</span>, <span class="extype" name="cilib.StepS.liftS.B">B</span>]</span>
+        <span class="name">liftS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="../scalaz/package.html#State[S,A]=scalaz.package.StateT[scalaz.Id.Id,S,A]" class="extmbr" name="scalaz.State">State</a>[<span class="extype" name="cilib.StepS.liftS.S">S</span>, <span class="extype" name="cilib.StepS.liftS.B">B</span>]</span>)</span><span class="result">: <a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.liftS.A">A</span>, <span class="extype" name="cilib.StepS.liftS.S">S</span>, <span class="extype" name="cilib.StepS.liftS.B">B</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../index.html#cilib.StepS$@liftS[A,S,B](a:scalaz.State[S,B]):cilib.StepS[A,S,B]" title="Permalink" target="_top">
@@ -412,23 +414,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="cilib.StepS#point" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="point[A,S,B](b:B):cilib.StepS[A,S,B]"></a>
-      <a id="point[A,S,B](B):StepS[A,S,B]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">point</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="b">b: <span class="extype" name="cilib.StepS.point.B">B</span></span>)</span><span class="result">: <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.point.A">A</span>, <span class="extype" name="cilib.StepS.point.S">S</span>, <span class="extype" name="cilib.StepS.point.B">B</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../index.html#cilib.StepS$@point[A,S,B](b:B):cilib.StepS[A,S,B]" title="Permalink" target="_top">
-        <img src="../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="cilib.StepS#pointR" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="pointR[A,S,B](a:cilib.RVar[B]):cilib.StepS[A,S,B]"></a>
       <a id="pointR[A,S,B](RVar[B]):StepS[A,S,B]"></a>
@@ -438,7 +423,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">pointR</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="RVar.html" class="extype" name="cilib.RVar">RVar</a>[<span class="extype" name="cilib.StepS.pointR.B">B</span>]</span>)</span><span class="result">: <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.pointR.A">A</span>, <span class="extype" name="cilib.StepS.pointR.S">S</span>, <span class="extype" name="cilib.StepS.pointR.B">B</span>]</span>
+        <span class="name">pointR</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="RVar.html" class="extype" name="cilib.RVar">RVar</a>[<span class="extype" name="cilib.StepS.pointR.B">B</span>]</span>)</span><span class="result">: <a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.pointR.A">A</span>, <span class="extype" name="cilib.StepS.pointR.S">S</span>, <span class="extype" name="cilib.StepS.pointR.B">B</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../index.html#cilib.StepS$@pointR[A,S,B](a:cilib.RVar[B]):cilib.StepS[A,S,B]" title="Permalink" target="_top">
@@ -455,7 +440,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">pointS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.StepS.pointS.A">A</span>, <span class="extype" name="cilib.StepS.pointS.B">B</span>]</span>)</span><span class="result">: <a href="package.html#StepS[A,S,B]=scalaz.StateT[[β]cilib.Step[A,β],S,B]" class="extmbr" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.pointS.A">A</span>, <span class="extype" name="cilib.StepS.pointS.S">S</span>, <span class="extype" name="cilib.StepS.pointS.B">B</span>]</span>
+        <span class="name">pointS</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.StepS.pointS.A">A</span>, <span class="extype" name="cilib.StepS.pointS.B">B</span>]</span>)</span><span class="result">: <a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.pointS.A">A</span>, <span class="extype" name="cilib.StepS.pointS.S">S</span>, <span class="extype" name="cilib.StepS.pointS.B">B</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../index.html#cilib.StepS$@pointS[A,S,B](a:cilib.Step[A,B]):cilib.StepS[A,S,B]" title="Permalink" target="_top">
@@ -463,36 +448,36 @@
       </a>
     </span>
       
-    </li><li name="cilib.StepS#put" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="put[A,S](s:S):scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,Unit]"></a>
-      <a id="put[A,S](S):IndexedStateT[[β]Step[A,β],S,S,Unit]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">put</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>]</span><span class="params">(<span name="s">s: <span class="extype" name="cilib.StepS.put.S">S</span></span>)</span><span class="result">: <span class="extype" name="scalaz.IndexedStateT">IndexedStateT</span>[[β]<a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.StepS.put.A">A</span>, <span class="extype" name="cilib.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.StepS.put.S">S</span>, <span class="extype" name="cilib.StepS.put.S">S</span>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../index.html#cilib.StepS$@put[A,S](s:S):scalaz.IndexedStateT[[β]cilib.Step[A,β],S,S,Unit]" title="Permalink" target="_top">
-        <img src="../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="cilib.StepS#stepSMonadState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="stepSMonadState[A,S]:scalaz.MonadState[[β,γ]scalaz.IndexedStateT[[β]cilib.Step[A,β],β,β,γ],S]"></a>
-      <a id="stepSMonadState[A,S]:MonadState[[β,γ]IndexedStateT[[β]Step[A,β],β,β,γ],S]"></a>
+    </li><li name="cilib.StepS#stepSMonad" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stepSMonad[A,S]:scalaz.Monad[[γ]cilib.StepS[A,S,γ]]"></a>
+      <a id="stepSMonad[A,S]:Monad[[γ]StepS[A,S,γ]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stepSMonadState</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>]</span><span class="result">: <span class="extype" name="scalaz.MonadState">MonadState</span>[[β, γ]<span class="extype" name="scalaz.IndexedStateT">IndexedStateT</span>[[β]<a href="Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.StepS.stepSMonadState.A">A</span>, <span class="extype" name="cilib.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.StepS.&lt;refinement&gt;.Λ$.β">β</span>, <span class="extype" name="cilib.StepS.&lt;refinement&gt;.Λ$.β">β</span>, <span class="extype" name="cilib.StepS.&lt;refinement&gt;.Λ$.γ">γ</span>], <span class="extype" name="cilib.StepS.stepSMonadState.S">S</span>]</span>
+        <span class="name">stepSMonad</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>]</span><span class="result">: <span class="extype" name="scalaz.Monad">Monad</span>[[γ]<a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.stepSMonad.A">A</span>, <span class="extype" name="cilib.StepS.stepSMonad.S">S</span>, <span class="extype" name="cilib.StepS.&lt;refinement&gt;.Λ$.γ">γ</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#cilib.StepS$@stepSMonadState[A,S]:scalaz.MonadState[[β,γ]scalaz.IndexedStateT[[β]cilib.Step[A,β],β,β,γ],S]" title="Permalink" target="_top">
+      <a href="../index.html#cilib.StepS$@stepSMonad[A,S]:scalaz.Monad[[γ]cilib.StepS[A,S,γ]]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.StepS#stepSMonadState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stepSMonadState[A,S]:scalaz.MonadState[[γ]cilib.StepS[A,S,γ],S]"></a>
+      <a id="stepSMonadState[A,S]:MonadState[[γ]StepS[A,S,γ],S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stepSMonadState</span><span class="tparams">[<span name="A">A</span>, <span name="S">S</span>]</span><span class="result">: <span class="extype" name="scalaz.MonadState">MonadState</span>[[γ]<a href="StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.StepS.stepSMonadState.A">A</span>, <span class="extype" name="cilib.StepS.stepSMonadState.S">S</span>, <span class="extype" name="cilib.StepS.&lt;refinement&gt;.Λ$.γ">γ</span>], <span class="extype" name="cilib.StepS.stepSMonadState.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#cilib.StepS$@stepSMonadState[A,S]:scalaz.MonadState[[γ]cilib.StepS[A,S,γ],S]" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -609,7 +594,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></h3>

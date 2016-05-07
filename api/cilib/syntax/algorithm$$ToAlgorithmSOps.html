@@ -49,7 +49,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/cirg-up/cilib/tree/master/core/src/main/scala/cilib/syntax/Algorithm.scala" target="_blank">Algorithm.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyVal" class="extype" target="_top">AnyVal</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="cilib.syntax.algorithm.ToAlgorithmSOps#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(self:List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,C])):cilib.syntax.algorithm.ToAlgorithmSOps[A,B,C,S]"></a>
+      <a id="&lt;init&gt;(self:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])):cilib.syntax.algorithm.ToAlgorithmSOps[A,B,C,S]"></a>
       <a id="&lt;init&gt;:ToAlgorithmSOps[A,B,C,S]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ToAlgorithmSOps</span><span class="params">(<span name="self">self: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../../scalaz/package.html#StateT[F[_],S,A]=scalaz.IndexedStateT[F,S,S,A]" class="extmbr" name="scalaz.StateT">StateT</a>[[β]<a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>]</span>)</span>
+        <span class="name">ToAlgorithmSOps</span><span class="params">(<span name="self">self: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@&lt;init&gt;(self:List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,C])):cilib.syntax.algorithm.ToAlgorithmSOps[A,B,C,S]" title="Permalink" target="_top">
+      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@&lt;init&gt;(self:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])):cilib.syntax.algorithm.ToAlgorithmSOps[A,B,C,S]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -183,18 +183,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="cilib.syntax.algorithm.ToAlgorithmSOps#flatMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="flatMap[D](g:C=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,D]):List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,D])"></a>
-      <a id="flatMap[D]((C)⇒StateT[[β]Step[A,β],S,D]):(List[B])⇒(B)⇒StateT[[β]Step[A,β],S,D]"></a>
+      <a id="flatMap[D](g:C=&gt;cilib.StepS[A,S,D]):List[B]=&gt;(B=&gt;cilib.StepS[A,S,D])"></a>
+      <a id="flatMap[D]((C)⇒StepS[A,S,D]):(List[B])⇒(B)⇒StepS[A,S,D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">flatMap</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>) ⇒ <a href="../../scalaz/package.html#StateT[F[_],S,A]=scalaz.IndexedStateT[F,S,S,A]" class="extmbr" name="scalaz.StateT">StateT</a>[[β]<a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.flatMap.D">D</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../../scalaz/package.html#StateT[F[_],S,A]=scalaz.IndexedStateT[F,S,S,A]" class="extmbr" name="scalaz.StateT">StateT</a>[[β]<a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.flatMap.D">D</span>]</span>
+        <span class="name">flatMap</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.flatMap.D">D</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.flatMap.D">D</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@flatMap[D](g:C=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,D]):List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,D])" title="Permalink" target="_top">
+      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@flatMap[D](g:C=&gt;cilib.StepS[A,S,D]):List[B]=&gt;(B=&gt;cilib.StepS[A,S,D])" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -234,35 +234,35 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="cilib.syntax.algorithm.ToAlgorithmSOps#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="map[D](g:C=&gt;D):List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,D])"></a>
-      <a id="map[D]((C)⇒D):(List[B])⇒(B)⇒StateT[[β]Step[A,β],S,D]"></a>
+      <a id="map[D](g:C=&gt;D):List[B]=&gt;(B=&gt;cilib.StepS[A,S,D])"></a>
+      <a id="map[D]((C)⇒D):(List[B])⇒(B)⇒StepS[A,S,D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>) ⇒ <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.map.D">D</span></span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../../scalaz/package.html#StateT[F[_],S,A]=scalaz.IndexedStateT[F,S,S,A]" class="extmbr" name="scalaz.StateT">StateT</a>[[β]<a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.map.D">D</span>]</span>
+        <span class="name">map</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>) ⇒ <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.map.D">D</span></span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.map.D">D</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@map[D](g:C=&gt;D):List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,D])" title="Permalink" target="_top">
+      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@map[D](g:C=&gt;D):List[B]=&gt;(B=&gt;cilib.StepS[A,S,D])" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="cilib.syntax.algorithm.ToAlgorithmSOps#self" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="self:List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,C])"></a>
-      <a id="self:(List[B])⇒(B)⇒StateT[[β]Step[A,β],S,C]"></a>
+      <a id="self:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])"></a>
+      <a id="self:(List[B])⇒(B)⇒StepS[A,S,C]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">self</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../../scalaz/package.html#StateT[F[_],S,A]=scalaz.IndexedStateT[F,S,S,A]" class="extmbr" name="scalaz.StateT">StateT</a>[[β]<a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>]</span>
+        <span class="name">self</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@self:List[B]=&gt;(B=&gt;scalaz.StateT[[β]cilib.Step[A,β],S,C])" title="Permalink" target="_top">
+      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@self:List[B]=&gt;(B=&gt;cilib.StepS[A,S,C])" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -285,18 +285,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="cilib.syntax.algorithm.ToAlgorithmSOps#zoom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="zoom[S0,S3](l:scalaz.LensFamily[S0,S3,S,S]):List[B]=&gt;(B=&gt;scalaz.IndexedStateT[[β]cilib.Step[A,β],S0,S3,C])"></a>
-      <a id="zoom[S0,S3](LensFamily[S0,S3,S,S]):(List[B])⇒(B)⇒IndexedStateT[[β]Step[A,β],S0,S3,C]"></a>
+      <a id="zoom[S0](l:scalaz.Lens[S0,S]):List[B]=&gt;(B=&gt;cilib.StepS[A,S0,C])"></a>
+      <a id="zoom[S0](Lens[S0,S]):(List[B])⇒(B)⇒StepS[A,S0,C]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zoom</span><span class="tparams">[<span name="S0">S0</span>, <span name="S3">S3</span>]</span><span class="params">(<span name="l">l: <span class="extype" name="scalaz.LensFamily">LensFamily</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.zoom.S0">S0</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.zoom.S3">S3</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <span class="extype" name="scalaz.IndexedStateT">IndexedStateT</span>[[β]<a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.&lt;refinement&gt;.Λ$.β">β</span>], <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.zoom.S0">S0</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.zoom.S3">S3</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>]</span>
+        <span class="name">zoom</span><span class="tparams">[<span name="S0">S0</span>]</span><span class="params">(<span name="l">l: <a href="../../scalaz/package.html#Lens[A,B]=scalaz.LensFamily[A,A,B,B]" class="extmbr" name="scalaz.Lens">Lens</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.zoom.S0">S0</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.S">S</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>]) ⇒ (<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.B">B</span>) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.A">A</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.zoom.S0">S0</span>, <span class="extype" name="cilib.syntax.algorithm.ToAlgorithmSOps.C">C</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@zoom[S0,S3](l:scalaz.LensFamily[S0,S3,S,S]):List[B]=&gt;(B=&gt;scalaz.IndexedStateT[[β]cilib.Step[A,β],S0,S3,C])" title="Permalink" target="_top">
+      <a href="../../index.html#cilib.syntax.algorithm$$ToAlgorithmSOps@zoom[S0](l:scalaz.Lens[S0,S]):List[B]=&gt;(B=&gt;cilib.StepS[A,S0,C])" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

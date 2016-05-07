@@ -1,0 +1,757 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>Heterogeneous - cilib.pso.Heterogeneous</title>
+          <meta name="description" content="Heterogeneous - cilib.pso.Heterogeneous" />
+          <meta name="keywords" content="Heterogeneous cilib.pso.Heterogeneous" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'cilib.pso.Heterogeneous$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Object" src="../../lib/object_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="cilib">cilib</a>.<a href="package.html" class="extype" name="cilib.pso">pso</a></p>
+        <h1>Heterogeneous</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="cilib.pso">package pso</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Heterogeneous</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="cilib.pso.Heterogeneous"><span>Heterogeneous</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="cilib.pso.Heterogeneous.Behaviour" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])"></a>
+      <a id="Behaviour[S,A,B]:Behaviour[S,A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Behaviour</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> = (<span class="extype" name="scala.List">List</span>[<a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.Behaviour.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.Behaviour.A">A</span>]]) ⇒ (<a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.Behaviour.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.Behaviour.A">A</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.Behaviour.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.Behaviour.B">B</span>, <a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.Behaviour.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.Behaviour.A">A</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous.HEntity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HEntity[S,A,B]=cilib.pso.User[cilib.Entity[S,A],B]"></a>
+      <a id="HEntity[S,A,B]:HEntity[S,A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HEntity</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> = <a href="User.html" class="extype" name="cilib.pso.User">User</a>[<a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.HEntity.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.HEntity.A">A</span>], <span class="extype" name="cilib.pso.Heterogeneous.HEntity.B">B</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@HEntity[S,A,B]=cilib.pso.User[cilib.Entity[S,A],B]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous.HEntityB" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]"></a>
+      <a id="HEntityB[S,A,B]:HEntityB[S,A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HEntityB</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> = <a href="User.html" class="extype" name="cilib.pso.User">User</a>[<a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.HEntityB.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.HEntityB.A">A</span>], <a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.HEntityB.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.HEntityB.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.HEntityB.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous.SI" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SI[S,A,B]=cilib.StepS[A,S,B]"></a>
+      <a id="SI[S,A,B]:SI[S,A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SI</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> = <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.SI.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.SI.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.SI.B">B</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@SI[S,A,B]=cilib.StepS[A,S,B]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="cilib.pso.Heterogeneous#assignRandom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="assignRandom[A,B,C](implicitM:scalaz.MonadState[[γ]cilib.StepS[C,List[cilib.pso.PoolItem[B]],γ],cilib.pso.Pool[B]]):List[A]=&gt;cilib.StepS[C,cilib.pso.Pool[B],List[cilib.pso.User[A,B]]]"></a>
+      <a id="assignRandom[A,B,C](MonadState[[γ]StepS[C,List[PoolItem[B]],γ],Pool[B]]):(List[A])⇒StepS[C,Pool[B],List[User[A,B]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">assignRandom</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="M">M: <span class="extype" name="scalaz.MonadState">MonadState</span>[[γ]<a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.assignRandom.C">C</span>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.collection.immutable.List" class="extype" target="_top">List</a>[<a href="PoolItem.html" class="extype" name="cilib.pso.PoolItem">PoolItem</a>[<span class="extype" name="cilib.pso.Heterogeneous.assignRandom.B">B</span>]], <span class="extype" name="cilib.pso.Heterogeneous.&lt;refinement&gt;.Λ$.γ">γ</span>], <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<span class="extype" name="cilib.pso.Heterogeneous.assignRandom.B">B</span>]]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="cilib.pso.Heterogeneous.assignRandom.A">A</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.assignRandom.C">C</span>, <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<span class="extype" name="cilib.pso.Heterogeneous.assignRandom.B">B</span>], <span class="extype" name="scala.List">List</span>[<a href="User.html" class="extype" name="cilib.pso.User">User</a>[<span class="extype" name="cilib.pso.Heterogeneous.assignRandom.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.assignRandom.B">B</span>]]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@assignRandom[A,B,C](implicitM:scalaz.MonadState[[γ]cilib.StepS[C,List[cilib.pso.PoolItem[B]],γ],cilib.pso.Pool[B]]):List[A]=&gt;cilib.StepS[C,cilib.pso.Pool[B],List[cilib.pso.User[A,B]]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="cilib.pso.Heterogeneous#dHPSO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dHPSO[S,A,B](stagThreshold:Int)(implicitevidence$1:cilib.PBestStagnation[S]):List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,(cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],B),cilib.pso.Heterogeneous.HEntityB[S,A,B]])"></a>
+      <a id="dHPSO[S,A,B](Int)(PBestStagnation[S]):(List[HEntityB[S,A,B]])⇒(HEntityB[S,A,B])⇒StepS[A,(Pool[Behaviour[S,A,B]],B),HEntityB[S,A,B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dHPSO</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="stagThreshold">stagThreshold: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../PBestStagnation.html" class="extype" name="cilib.PBestStagnation">PBestStagnation</a>[<span class="extype" name="cilib.pso.Heterogeneous.dHPSO.S">S</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.dHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.B">B</span>]]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.dHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.dHPSO.A">A</span>, (<a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.dHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.B">B</span>]], <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.B">B</span>), <a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.dHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.dHPSO.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@dHPSO[S,A,B](stagThreshold:Int)(implicitevidence$1:cilib.PBestStagnation[S]):List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,(cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],B),cilib.pso.Heterogeneous.HEntityB[S,A,B]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="cilib.pso.Heterogeneous#fkPSO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fkPSO[S,A,B](stagThreshold:Int,tournSize:Int)(implicitevidence$2:cilib.PBestStagnation[S]):List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,(cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],B),cilib.pso.Heterogeneous.HEntityB[S,A,B]])"></a>
+      <a id="fkPSO[S,A,B](Int,Int)(PBestStagnation[S]):(List[HEntityB[S,A,B]])⇒(HEntityB[S,A,B])⇒StepS[A,(Pool[Behaviour[S,A,B]],B),HEntityB[S,A,B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fkPSO</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="stagThreshold">stagThreshold: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="tournSize">tournSize: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../PBestStagnation.html" class="extype" name="cilib.PBestStagnation">PBestStagnation</a>[<span class="extype" name="cilib.pso.Heterogeneous.fkPSO.S">S</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.fkPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.B">B</span>]]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.fkPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.fkPSO.A">A</span>, (<a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.fkPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.B">B</span>]], <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.B">B</span>), <a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.fkPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.fkPSO.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@fkPSO[S,A,B](stagThreshold:Int,tournSize:Int)(implicitevidence$2:cilib.PBestStagnation[S]):List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,(cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],B),cilib.pso.Heterogeneous.HEntityB[S,A,B]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous#genericHPSO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="genericHPSO[S,A,B](schedule:cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;Boolean,selector:List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Heterogeneous.HEntityB[S,A,B]]),updater:cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]])):List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,(cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],B),cilib.pso.Heterogeneous.HEntityB[S,A,B]])"></a>
+      <a id="genericHPSO[S,A,B]((HEntityB[S,A,B])⇒Boolean,(List[HEntityB[S,A,B]])⇒(HEntityB[S,A,B])⇒StepS[A,Pool[Behaviour[S,A,B]],HEntityB[S,A,B]],(HEntityB[S,A,B])⇒(HEntityB[S,A,B])⇒StepS[A,Pool[Behaviour[S,A,B]],Pool[Behaviour[S,A,B]]]):(List[HEntityB[S,A,B]])⇒(HEntityB[S,A,B])⇒StepS[A,(Pool[Behaviour[S,A,B]],B),HEntityB[S,A,B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">genericHPSO</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="schedule">schedule: (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]) ⇒ <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="selector">selector: (<span class="extype" name="scala.List">List</span>[<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]], <a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]]</span>, <span name="updater">updater: (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]], <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]]]</span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, (<a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]], <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>), <a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.genericHPSO.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@genericHPSO[S,A,B](schedule:cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;Boolean,selector:List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Heterogeneous.HEntityB[S,A,B]]),updater:cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]])):List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,(cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],B),cilib.pso.Heterogeneous.HEntityB[S,A,B]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="cilib.pso.Heterogeneous#incrementOne" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="incrementOne[S,A,B](implicitM:scalaz.MonadState[[γ]cilib.StepS[A,List[cilib.pso.PoolItem[List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])]],γ],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]]):cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]])"></a>
+      <a id="incrementOne[S,A,B](MonadState[[γ]StepS[A,List[PoolItem[(List[Entity[S,A]])⇒(Entity[S,A])⇒StepS[A,B,Entity[S,A]]]],γ],Pool[Behaviour[S,A,B]]]):(HEntityB[S,A,B])⇒(HEntityB[S,A,B])⇒StepS[A,Pool[Behaviour[S,A,B]],Pool[Behaviour[S,A,B]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">incrementOne</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="M">M: <span class="extype" name="scalaz.MonadState">MonadState</span>[[γ]<a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.collection.immutable.List" class="extype" target="_top">List</a>[<a href="PoolItem.html" class="extype" name="cilib.pso.PoolItem">PoolItem</a>[(<a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.collection.immutable.List" class="extype" target="_top">List</a>[<a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>]]) ⇒ (<a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.B">B</span>, <a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>]]]], <span class="extype" name="cilib.pso.Heterogeneous.&lt;refinement&gt;.Λ$.γ">γ</span>], <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.B">B</span>]]]</span>)</span><span class="result">: (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.B">B</span>]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.B">B</span>]], <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.incrementOne.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.incrementOne.B">B</span>]]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@incrementOne[S,A,B](implicitM:scalaz.MonadState[[γ]cilib.StepS[A,List[cilib.pso.PoolItem[List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])]],γ],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]]):cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="cilib.pso.Heterogeneous#nullPoolUpdate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nullPoolUpdate[S,A,B]:cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]])"></a>
+      <a id="nullPoolUpdate[S,A,B]:(HEntityB[S,A,B])⇒(HEntityB[S,A,B])⇒StepS[A,Pool[Behaviour[S,A,B]],Pool[Behaviour[S,A,B]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nullPoolUpdate</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result">: (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.B">B</span>]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.A">A</span>, <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.B">B</span>]], <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<a href="#Behaviour[S,A,B]=List[cilib.Entity[S,A]]=&gt;(cilib.Entity[S,A]=&gt;cilib.StepS[A,B,cilib.Entity[S,A]])" class="extmbr" name="cilib.pso.Heterogeneous.Behaviour">Behaviour</a>[<span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.nullPoolUpdate.B">B</span>]]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@nullPoolUpdate[S,A,B]:cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]],cilib.pso.Pool[cilib.pso.Heterogeneous.Behaviour[S,A,B]]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous#pbestStagnated" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pbestStagnated[S,A,B](threshold:Int)(implicitS:cilib.PBestStagnation[S]):cilib.pso.Heterogeneous.HEntity[S,A,B]=&gt;Boolean"></a>
+      <a id="pbestStagnated[S,A,B](Int)(PBestStagnation[S]):(HEntity[S,A,B])⇒Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pbestStagnated</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="threshold">threshold: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="S">S: <a href="../PBestStagnation.html" class="extype" name="cilib.PBestStagnation">PBestStagnation</a>[<span class="extype" name="cilib.pso.Heterogeneous.pbestStagnated.S">S</span>]</span>)</span><span class="result">: (<a href="#HEntity[S,A,B]=cilib.pso.User[cilib.Entity[S,A],B]" class="extmbr" name="cilib.pso.Heterogeneous.HEntity">HEntity</a>[<span class="extype" name="cilib.pso.Heterogeneous.pbestStagnated.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.pbestStagnated.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.pbestStagnated.B">B</span>]) ⇒ <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@pbestStagnated[S,A,B](threshold:Int)(implicitS:cilib.PBestStagnation[S]):cilib.pso.Heterogeneous.HEntity[S,A,B]=&gt;Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous#poolSelectRandom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="poolSelectRandom[A,B,C]:List[cilib.pso.User[A,B]]=&gt;(cilib.pso.User[A,B]=&gt;cilib.StepS[C,cilib.pso.Pool[B],cilib.pso.User[A,B]])"></a>
+      <a id="poolSelectRandom[A,B,C]:(List[User[A,B]])⇒(User[A,B])⇒StepS[C,Pool[B],User[A,B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">poolSelectRandom</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<a href="User.html" class="extype" name="cilib.pso.User">User</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.B">B</span>]]) ⇒ (<a href="User.html" class="extype" name="cilib.pso.User">User</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.C">C</span>, <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.B">B</span>], <a href="User.html" class="extype" name="cilib.pso.User">User</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.poolSelectRandom.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@poolSelectRandom[A,B,C]:List[cilib.pso.User[A,B]]=&gt;(cilib.pso.User[A,B]=&gt;cilib.StepS[C,cilib.pso.Pool[B],cilib.pso.User[A,B]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous#poolSelectTournament" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="poolSelectTournament[A,B,C](k:Int):List[cilib.pso.User[A,B]]=&gt;(cilib.pso.User[A,B]=&gt;cilib.StepS[C,cilib.pso.Pool[B],cilib.pso.User[A,B]])"></a>
+      <a id="poolSelectTournament[A,B,C](Int):(List[User[A,B]])⇒(User[A,B])⇒StepS[C,Pool[B],User[A,B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">poolSelectTournament</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="k">k: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<a href="User.html" class="extype" name="cilib.pso.User">User</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.B">B</span>]]) ⇒ (<a href="User.html" class="extype" name="cilib.pso.User">User</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.C">C</span>, <a href="package.html#Pool[A]=List[cilib.pso.PoolItem[A]]" class="extmbr" name="cilib.pso.Pool">Pool</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.B">B</span>], <a href="User.html" class="extype" name="cilib.pso.User">User</a>[<span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.poolSelectTournament.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@poolSelectTournament[A,B,C](k:Int):List[cilib.pso.User[A,B]]=&gt;(cilib.pso.User[A,B]=&gt;cilib.StepS[C,cilib.pso.Pool[B],cilib.pso.User[A,B]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous#resetStagnation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="resetStagnation[S,A,B](implicitS:cilib.PBestStagnation[S]):cilib.pso.Heterogeneous.HEntity[S,A,B]=&gt;cilib.pso.Heterogeneous.HEntity[S,A,B]"></a>
+      <a id="resetStagnation[S,A,B](PBestStagnation[S]):(HEntity[S,A,B])⇒HEntity[S,A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">resetStagnation</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="S">S: <a href="../PBestStagnation.html" class="extype" name="cilib.PBestStagnation">PBestStagnation</a>[<span class="extype" name="cilib.pso.Heterogeneous.resetStagnation.S">S</span>]</span>)</span><span class="result">: (<a href="#HEntity[S,A,B]=cilib.pso.User[cilib.Entity[S,A],B]" class="extmbr" name="cilib.pso.Heterogeneous.HEntity">HEntity</a>[<span class="extype" name="cilib.pso.Heterogeneous.resetStagnation.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.resetStagnation.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.resetStagnation.B">B</span>]) ⇒ <a href="#HEntity[S,A,B]=cilib.pso.User[cilib.Entity[S,A],B]" class="extmbr" name="cilib.pso.Heterogeneous.HEntity">HEntity</a>[<span class="extype" name="cilib.pso.Heterogeneous.resetStagnation.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.resetStagnation.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.resetStagnation.B">B</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@resetStagnation[S,A,B](implicitS:cilib.PBestStagnation[S]):cilib.pso.Heterogeneous.HEntity[S,A,B]=&gt;cilib.pso.Heterogeneous.HEntity[S,A,B]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="cilib.pso.Heterogeneous#updateStagnation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updateStagnation[S,A](p:cilib.Entity[S,A])(implicitM:cilib.Memory[S,A],implicitS:cilib.PBestStagnation[S]):cilib.Step[A,cilib.Entity[S,A]]"></a>
+      <a id="updateStagnation[S,A](Entity[S,A])(Memory[S,A],PBestStagnation[S]):Step[A,Entity[S,A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateStagnation</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>]</span><span class="params">(<span name="p">p: <a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="M">M: <a href="../Memory.html" class="extype" name="cilib.Memory">Memory</a>[<span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.A">A</span>]</span>, <span name="S">S: <a href="../PBestStagnation.html" class="extype" name="cilib.PBestStagnation">PBestStagnation</a>[<span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.S">S</span>]</span>)</span><span class="result">: <a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.A">A</span>, <a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.updateStagnation.A">A</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@updateStagnation[S,A](p:cilib.Entity[S,A])(implicitM:cilib.Memory[S,A],implicitS:cilib.PBestStagnation[S]):cilib.Step[A,cilib.Entity[S,A]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous#useBehaviour" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="useBehaviour[S,A,B]:List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,B,cilib.pso.Heterogeneous.HEntityB[S,A,B]])"></a>
+      <a id="useBehaviour[S,A,B]:(List[HEntityB[S,A,B]])⇒(HEntityB[S,A,B])⇒StepS[A,B,HEntityB[S,A,B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">useBehaviour</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.B">B</span>]]) ⇒ (<a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.B">B</span>]) ⇒ <a href="../StepS.html" class="extype" name="cilib.StepS">StepS</a>[<span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.B">B</span>, <a href="#HEntityB[S,A,B]=cilib.pso.Heterogeneous.HEntity[S,A,cilib.pso.Heterogeneous.Behaviour[S,A,B]]" class="extmbr" name="cilib.pso.Heterogeneous.HEntityB">HEntityB</a>[<span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.S">S</span>, <span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.A">A</span>, <span class="extype" name="cilib.pso.Heterogeneous.useBehaviour.B">B</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@useBehaviour[S,A,B]:List[cilib.pso.Heterogeneous.HEntityB[S,A,B]]=&gt;(cilib.pso.Heterogeneous.HEntityB[S,A,B]=&gt;cilib.StepS[A,B,cilib.pso.Heterogeneous.HEntityB[S,A,B]])" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.Heterogeneous$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

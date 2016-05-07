@@ -1,0 +1,334 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>pso - cilib.pso</title>
+          <meta name="description" content="pso - cilib.pso" />
+          <meta name="keywords" content="pso cilib.pso" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'cilib.pso.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="cilib">cilib</a></p>
+        <h1>pso</h1><span class="permalink">
+      <a href="../../index.html#cilib.pso.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pso</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="cilib.pso"><span>pso</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="cilib.pso.Guide" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Guide[S,A]=(List[cilib.pso.package.Particle[S,A]],cilib.pso.package.Particle[S,A])=&gt;cilib.Step[A,cilib.Position[A]]"></a>
+      <a id="Guide[S,A]:Guide[S,A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Guide</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>]</span><span class="result"> = (<span class="extype" name="scala.List">List</span>[<a href="#Particle[S,A]=cilib.Entity[S,A]" class="extmbr" name="cilib.pso.Particle">Particle</a>[<span class="extype" name="cilib.pso.Guide.S">S</span>, <span class="extype" name="cilib.pso.Guide.A">A</span>]], <a href="#Particle[S,A]=cilib.Entity[S,A]" class="extmbr" name="cilib.pso.Particle">Particle</a>[<span class="extype" name="cilib.pso.Guide.S">S</span>, <span class="extype" name="cilib.pso.Guide.A">A</span>]) ⇒ <a href="../Step.html" class="extype" name="cilib.Step">Step</a>[<span class="extype" name="cilib.pso.Guide.A">A</span>, <a href="../Position.html" class="extype" name="cilib.Position">Position</a>[<span class="extype" name="cilib.pso.Guide.A">A</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@Guide[S,A]=(List[cilib.pso.package.Particle[S,A]],cilib.pso.package.Particle[S,A])=&gt;cilib.Step[A,cilib.Position[A]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Particle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Particle[S,A]=cilib.Entity[S,A]"></a>
+      <a id="Particle[S,A]:Particle[S,A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Particle</span><span class="tparams">[<span name="S">S</span>, <span name="A">A</span>]</span><span class="result"> = <a href="../Entity.html" class="extype" name="cilib.Entity">Entity</a>[<span class="extype" name="cilib.pso.Particle.S">S</span>, <span class="extype" name="cilib.pso.Particle.A">A</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@Particle[S,A]=cilib.Entity[S,A]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Pool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Pool[A]=List[cilib.pso.PoolItem[A]]"></a>
+      <a id="Pool[A]:Pool[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Pool</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> = <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.collection.immutable.List" class="extype" target="_top">List</a>[<a href="PoolItem.html" class="extype" name="cilib.pso.PoolItem">PoolItem</a>[<span class="extype" name="cilib.pso.Pool.A">A</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@Pool[A]=List[cilib.pso.PoolItem[A]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.PoolItem" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PoolItem[A]extendsAnyRef"></a>
+      <a id="PoolItem[A]:PoolItem[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PoolItem.html"><span class="name">PoolItem</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@PoolItem[A]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.PopAlg" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PopAlg[A]extendsAnyRef"></a>
+      <a id="PopAlg[A]:PopAlg[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PopAlg.html"><span class="name">PopAlg</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@PopAlg[A]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.User" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="User[A,B]extendsProductwithSerializable"></a>
+      <a id="User[A,B]:User[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="User.html"><span class="name">User</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="user">user: <span class="extype" name="cilib.pso.User.A">A</span></span>, <span name="item">item: <a href="PoolItem.html" class="extype" name="cilib.pso.PoolItem">PoolItem</a>[<span class="extype" name="cilib.pso.User.B">B</span>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@User[A,B]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="cilib.pso.Defaults" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Defaults"></a>
+      <a id="Defaults:Defaults"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Defaults$.html"><span class="name">Defaults</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@Defaults" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Guide" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Guide"></a>
+      <a id="Guide:Guide"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Guide$.html"><span class="name">Guide</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@Guide" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Heterogeneous" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Heterogeneous"></a>
+      <a id="Heterogeneous:Heterogeneous"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Heterogeneous$.html"><span class="name">Heterogeneous</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@Heterogeneous" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.PSO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PSO"></a>
+      <a id="PSO:PSO"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PSO$.html"><span class="name">PSO</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@PSO" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.Pool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Pool"></a>
+      <a id="Pool:Pool"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Pool$.html"><span class="name">Pool</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@Pool" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="cilib.pso.PoolItem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PoolItem"></a>
+      <a id="PoolItem:PoolItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PoolItem$.html"><span class="name">PoolItem</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#cilib.pso.package@PoolItem" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
