@@ -30,7 +30,8 @@
   
 
   
-    <link rel="top" title="CIlib 2.0.0-M2 documentation" href="#"/> 
+    <link rel="top" title="CIlib 2.0.0-M2 documentation" href="#"/>
+        <link rel="next" title="Overview" href="design/overview.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -79,7 +80,21 @@
           
             
             
-                <ul class="simple">
+                <ul>
+<li class="toctree-l1"><a class="reference external" href="https://cirg-up.github.io/cilib/api">Scaladoc</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Design</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design/position.html">Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design/entity.html">Entity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design/rvar.html">RVar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design/step.html">Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design/step_with_state.html">StepS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/gbestpso.html">GBestPSO</a></li>
 </ul>
 
             
@@ -114,8 +129,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
   </ul>
@@ -126,25 +139,98 @@
             
   <div class="section" id="welcome-to-cilib-s-documentation">
 <h1>Welcome to CIlib&#8217;s documentation!<a class="headerlink" href="#welcome-to-cilib-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><strong>CIlib is currently in active development.</strong> Feedback and contributions are welcomed as we work to improve the library.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>CIlib is currently available for Scala 2.11 (builds for 2.12 are being planned).</p>
+<p>To get started, you need will need to include the required CIlib module into your project&#8217;s build.sbt</p>
+<blockquote>
+<div>libraryDependencies += &#8220;&#8221; %% &#8220;&#8221; %</div></blockquote>
+<p>CIlib consists of several modules, each containing specialized parts of the larger library. Please refer to
+the project structure for a listing of each of the modules and what they provide. Additional dependencies
+on community projects include the following:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference external" href="https://github.com/scalaz/scalaz">Scalaz</a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference external" href="https://github.com/non/spire">Spire</a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference external" href="http://julien-truffaut.github.io/Monocle/">Monocle</a></li>
+</ul>
+</td></tr></table>
+</div>
+<div class="section" id="motivations">
+<h2>Motivations<a class="headerlink" href="#motivations" title="Permalink to this headline">¶</a></h2>
+<p>CIlib is software library which aids in the experimentation and research of
+Computational Intelligence algorithms. Previously, in version 1.0 and lower, CIlib
+started demonstrating several shortcomings, and as a result, the current
+development process began. In order to address these shortcomings, the following were
+highlighted:</p>
+<div class="section" id="approachability">
+<h3>Approachability:<a class="headerlink" href="#approachability" title="Permalink to this headline">¶</a></h3>
+<p>The learning needed to understand and use CIlib should remain as low as possible and the community
+around the library should continue to be a helpful and supportive group of individuals. Questions
+and contributions are always welcome, and the feedback will allow better decisions to be made which
+will hopefully allow faster understanding of the library itself. If you have any feedback for us, we would
+love to hear from you. Please contact is in <code class="docutils literal"><span class="pre">#cilib</span></code> on <code class="docutils literal"><span class="pre">FreeNode</span></code> or come chat to us
+in the project&#8217;s <a class="reference external" href="https://gitter.im/cirg-up/cilib">Gitter channel</a>; alternatively feel free to
+open an issue on the <a class="reference external" href="https://github.com/cirg-up/cilib">project page</a>.</p>
+</div>
+<div class="section" id="well-principled-design">
+<h3>Well principled design:<a class="headerlink" href="#well-principled-design" title="Permalink to this headline">¶</a></h3>
+<p>It is very important to ensure that the library code is pure. This has many advantages
+but, most importantly, it allows for the controlling of side-effects which is a primary concern,
+especially when randomness is involved. As a consequence of this, and other aspects, CIlib makes
+an active effort to address the following:</p>
+<ul class="simple">
+<li><strong>Correctness:</strong> All algorithmic components should be correct and operate as intended, doing nothing
+more. Peer-review is indispensable in this regard, providing confidence that the implementations are
+correct and sound.</li>
+<li><strong>Type safety:</strong> The use of types is a fantastic way to ensure that a program cannot represent
+invalid states. This removes a huge set of potential errors and ensures greater confidence, as the
+compiler is always double-checking the code.</li>
+<li><strong>Reproducability:</strong> Within scientific research, being able to reproduce the work of another
+researcher is important. When complexities such as randomness are involved, this becomes much more
+difficult and is generally extremely cumbersome. CIlib, as a result, must allow for the perfect
+replication of experimental work.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="project-structure">
+<h2>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+<p>Trying to maintain a modular set of functionalities, CIlib consists of several sub-projects:</p>
+<ul class="simple">
+<li><em>core</em> - contains typeclass definitions together with instances and various data structures</li>
+<li><em>exec</em> - simplistic execution code allowing for experimental execution</li>
+<li><em>de</em> - data structures and logic related to Differential Evolution</li>
+<li><em>ga</em> - data structures and logic related to Genetic Algorithms</li>
+<li><em>moo</em> - typeclasses, instances and data structures for Multi-Objective Optimization</li>
+<li><em>pso</em> - data structures and logic related to Particle Swarm Optimization</li>
+</ul>
 <div class="toctree-wrapper compound">
-<ul class="simple">
-</ul>
+</div>
+<div class="toctree-wrapper compound" id="design">
+</div>
+<div class="toctree-wrapper compound" id="examples">
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-</ul>
 </div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="design/overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
@@ -154,8 +240,7 @@
         &copy; Copyright 2016, Gary Pampara.
 
     </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  </div> 
 
 </footer>
 

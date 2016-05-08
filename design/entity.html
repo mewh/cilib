@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Entity &mdash; CIlib 2.0.0-M2 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CIlib 2.0.0-M2 documentation" href="../index.html"/>
+        <link rel="next" title="RVar" href="rvar.html"/>
+        <link rel="prev" title="Position" href="position.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CIlib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0-M2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference external" href="https://cirg-up.github.io/cilib/api">Scaladoc</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Design</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="position.html">Position</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Entity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rvar.html">RVar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step_with_state.html">StepS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/gbestpso.html">GBestPSO</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CIlib</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Entity</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="entity">
+<h1>Entity<a class="headerlink" href="#entity" title="Permalink to this headline">¶</a></h1>
+<p>Within swarm intelligence, evolutionary computation and other similar algorithms, there
+is always a metaphor that the algorithm is based on. Using this metaphor, the participants
+withing the algorithm are also appropriately named. For example, within a
+<abbr title="Particle Swarm Optimization">PSO</abbr>, the participants are referred to as Particles,
+with Individuals being used in both <abbr title="Differential Evolution">DE</abbr> and
+<abbr title="Genetic Algorithms">GA</abbr>. Many other examples can easily be identified in
+available literature.</p>
+<p>It is not practical to have several representations for something that is essentially
+the same in these individual algorithms. Based on the experimentation within CIlib,
+it was identified that a common structure could be used to represent the participants
+for these metaphor-based population based algorithms, which we refer to as an <code class="docutils literal"><span class="pre">Entity</span></code>.</p>
+<p>An <code class="docutils literal"><span class="pre">Entity</span></code> is a simple stucture that contains and manages two very specific things:</p>
+<ul class="simple">
+<li>A <code class="docutils literal"><span class="pre">Position</span></code> within the current search space of the problem in question</li>
+<li>A &#8220;state&#8221; that contains all addition data required by the <code class="docutils literal"><span class="pre">Entity</span></code> that is not
+the position</li>
+</ul>
+<p>As a result, <code class="docutils literal"><span class="pre">Entity</span></code> is represented by the following parameterized data type</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="k">case</span> <span class="k">class</span> <span class="nc">Entity</span><span class="o">[</span><span class="kt">S</span>,<span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">S</span><span class="o">,</span> <span class="n">x</span><span class="k">:</span> <span class="kt">Position</span><span class="o">[</span><span class="kt">A</span><span class="o">])</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">S</span></code> is the type of the state that the <code class="docutils literal"><span class="pre">Entity</span></code> maintains, and <code class="docutils literal"><span class="pre">A</span></code> is the type
+of a dimension within a <code class="docutils literal"><span class="pre">Position</span></code>.</p>
+<p>The state value differs between <code class="docutils literal"><span class="pre">Entity</span></code> instances, where a Particle may need to manage a
+velocity vector and a previous best position vector, an Individual, by contrast, need
+manage no additional data.</p>
+<p>Because the value of <code class="docutils literal"><span class="pre">S</span></code> can be anything, it is not possible to have pre-defined functions
+that allow extraction of data from whatever type <code class="docutils literal"><span class="pre">S</span></code> may be. In order to enable this,
+a structure <code class="docutils literal"><span class="pre">Lens</span></code> was used. A <code class="docutils literal"><span class="pre">Lens</span></code> can be seen as a getter and setter function
+pair. Within CIlib, several common lenses are availble to extract information from the state
+of the <code class="docutils literal"><span class="pre">Entity</span></code>. <a class="reference external" href="http://julien-truffaut.github.io/Monocle/">Monocle</a> is used to provide
+the lens functionality. Lenses are strucutures that can also be composed together and are
+collectively called &#8220;optics&#8221;. Please refer to the documentation of Monocle to learn more about
+lenses and optics.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rvar.html" class="btn btn-neutral float-right" title="RVar" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="position.html" class="btn btn-neutral" title="Position" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Gary Pampara.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.0.0-M2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
