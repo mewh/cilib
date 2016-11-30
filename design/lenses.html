@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lenses &mdash; CIlib 2.0.0-M3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CIlib 2.0.0-M3 documentation" href="../index.html"/>
+        <link rel="next" title="RVar" href="rvar.html"/>
+        <link rel="prev" title="Entity" href="entity.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CIlib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0-M3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference external" href="https://cirg-up.github.io/cilib/api">Scaladoc</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Design</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="position.html">Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rvar.html">RVar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Step</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step_with_state.html">StepS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/gbestpso.html">GBestPSO</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CIlib</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Lenses</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lenses">
+<h1>Lenses<a class="headerlink" href="#lenses" title="Permalink to this headline">¶</a></h1>
+<p>A <code class="docutils literal"><span class="pre">Lens</span></code> can, in the most trivial of ways, be seen as a getter and setter function pair.
+Within CIlib, several common lenses are availble to the user in order to extract information from the state
+of the <code class="docutils literal"><span class="pre">Entity</span></code>, or anything else for which a <code class="docutils literal"><span class="pre">Lens</span></code> has been defined. Because lenses allow the user
+to zoom onto data, potentially nested under many levels in another data structure, they are convienient
+as they allow for correctly updating the &#8220;zoomed&#8221; location. When we use &#8220;correctly&#8221;, it is because with
+immutable data structures, updates to values deep within a data structure need to correctly &#8220;bubble out&#8221;, such
+that the entire stucture is correctly updated to ensure that the data structure remains immutable and consistent.</p>
+<p>In order to not re-invent the wheel, the <a class="reference external" href="http://julien-truffaut.github.io/Monocle/">Monocle</a> library
+provides the lens functionality. Lenses are strucutures that can also be composed together and are
+collectively called &#8220;optics&#8221;. Please refer to Monocle&#8217;s documentation to learn more about
+lenses and optics. CIlib specific lens questions can be directed to the different CIlib support channels.</p>
+<p>Lenses privide an API that is first and foremost, composition and lawful. This means that the various
+optics are well behaved and rules exist that govern their usage. Furthermore, different optics may be
+composed together to create new optics that are the combination of the original optics. This is obviously
+only possible if the provided types correctly line up.</p>
+<p>Building on the usage of optics in general, we use a mechanism known as &#8220;classy lens&#8221; in Haskell. This
+mechanism prevents invalid usage, by letting the compiler fail based on the types being used.
+In the case of <code class="docutils literal"><span class="pre">Entity</span></code>, the compiler would look up instances, using it&#8217;s implicit resolution rules, to obtain
+evidence for a typeclass with a given set of types, at compile time.</p>
+<p>This provides an additional level of surity that the data being passed to a function that expects a parameter
+that has the evidence to extract some other piece of information for a given type.
+This may seem quite like a mouth full, but let&#8217;s have a look a few examples that will hopefully make the usage clear.</p>
+<p>Based on the normally accepted usage of &#8220;classy lenses&#8221;, the typeclasses that expose lenses are generally
+prefixed with <code class="docutils literal"><span class="pre">Has</span></code>. A simple example of this would be the <code class="docutils literal"><span class="pre">HasMemory</span></code> typeclass.
+The typeclass definition is simply:</p>
+<div class="highlight-default"><div class="highlight"><pre><span class="n">trait</span> <span class="n">HasMemory</span><span class="p">[</span><span class="n">S</span><span class="p">,</span><span class="n">A</span><span class="p">]</span> <span class="p">{</span>
+  <span class="k">def</span> <span class="nf">_memory</span><span class="p">:</span> <span class="n">Lens</span><span class="p">[</span><span class="n">S</span><span class="p">,</span> <span class="n">Position</span><span class="p">[</span><span class="n">A</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">HasMemory</span></code> defines a lens, with the name <code class="docutils literal"><span class="pre">_memory</span></code> that can, from a given <code class="docutils literal"><span class="pre">S</span></code> provide a <code class="docutils literal"><span class="pre">Position[A]</span></code>.
+There is absolutely no mention of what <code class="docutils literal"><span class="pre">S</span></code> is, or should be, but the typeclass allows for a set of
+instances that can actually provide this result. For example, in the context of the GA, Individuals are
+entities that <em>do not</em> maintain a memory; whereas in the PSO, Particles do maintain a memory of their
+previous best position (where <code class="docutils literal"><span class="pre">Position[A]</span></code> is a candidate solution of the problem space).</p>
+<p>Within the definitions of CIlib, an Individual is nothing more than a <code class="docutils literal"><span class="pre">Entity[Unit,A]</span></code> for some
+type <code class="docutils literal"><span class="pre">A</span></code>. As the type states, there is no state value for the <code class="docutils literal"><span class="pre">Entity</span></code>, and it is defined to
+be <code class="docutils literal"><span class="pre">Unit</span></code> - a type that exists with a single value (expressed as <code class="docutils literal"><span class="pre">()</span></code>), which is uninteresting.</p>
+<p>Using this definition, the following function would accept Pariticle entities, but would fail
+to compile (due to missing evidence) if an Individual entity is passed to it:</p>
+<div class="highlight-default"><div class="highlight"><pre><span class="k">def</span> <span class="nf">foo</span><span class="p">[</span><span class="n">S</span><span class="p">](</span><span class="n">xs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Entity</span><span class="p">[</span><span class="n">S</span><span class="p">,</span><span class="n">Double</span><span class="p">]])(</span><span class="n">implicit</span> <span class="n">mem</span><span class="p">:</span> <span class="n">HasMemory</span><span class="p">[</span><span class="n">S</span><span class="p">,</span><span class="n">Double</span><span class="p">])</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>If the function <code class="docutils literal"><span class="pre">foo</span></code> did not have the implicit constraint defined, both a list of particle or individual
+entities would be accepted. Within the <code class="docutils literal"><span class="pre">core</span></code> module, several basic optics (focusing on <code class="docutils literal"><span class="pre">Entity</span></code>)
+are available for use.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rvar.html" class="btn btn-neutral float-right" title="RVar" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="entity.html" class="btn btn-neutral" title="Entity" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, CIRG and contributors.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.0.0-M3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

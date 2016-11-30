@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to CIlib’s documentation! &mdash; CIlib 2.0.0-M2 documentation</title>
+  <title>Welcome to CIlib’s documentation! &mdash; CIlib 2.0.0-M3 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CIlib 2.0.0-M2 documentation" href="#"/>
+    <link rel="top" title="CIlib 2.0.0-M3 documentation" href="#"/>
         <link rel="next" title="Overview" href="design/overview.html"/> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                2.0.0-M2
+                2.0.0-M3
               </div>
             
           
@@ -88,6 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="design/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="design/position.html">Position</a></li>
 <li class="toctree-l1"><a class="reference internal" href="design/entity.html">Entity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design/lenses.html">Lenses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="design/rvar.html">RVar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="design/step.html">Step</a></li>
 <li class="toctree-l1"><a class="reference internal" href="design/step_with_state.html">StepS</a></li>
@@ -148,7 +149,7 @@
 <p>CIlib is currently available for Scala 2.11 (builds for 2.12 are being planned).</p>
 <p>To get started, you need will need to include the required CIlib module into your project&#8217;s build.sbt</p>
 <blockquote>
-<div>libraryDependencies += &#8220;&#8221; %% &#8220;&#8221; %</div></blockquote>
+<div>libraryDependencies += &#8220;net.cilib&#8221; %% &#8220;cilib-<a href="#id1"><span class="problematic" id="id2">*</span></a>&#8221; % &#8220;&lt;version&gt;&#8221;</div></blockquote>
 <p>CIlib consists of several modules, each containing specialized parts of the larger library. Please refer to
 the project structure for a listing of each of the modules and what they provide. Additional dependencies
 on community projects include the following:</p>
@@ -170,8 +171,10 @@ Computational Intelligence algorithms. Previously, in version 1.0 and lower, CIl
 started demonstrating several shortcomings, and as a result, the current
 development process began. In order to address these shortcomings, the following were
 highlighted:</p>
+</div>
+</div>
 <div class="section" id="approachability">
-<h3>Approachability:<a class="headerlink" href="#approachability" title="Permalink to this headline">¶</a></h3>
+<h1>Approachability:<a class="headerlink" href="#approachability" title="Permalink to this headline">¶</a></h1>
 <p>The learning needed to understand and use CIlib should remain as low as possible and the community
 around the library should continue to be a helpful and supportive group of individuals. Questions
 and contributions are always welcome, and the feedback will allow better decisions to be made which
@@ -181,7 +184,7 @@ in the project&#8217;s <a class="reference external" href="https://gitter.im/cir
 open an issue on the <a class="reference external" href="https://github.com/cirg-up/cilib">project page</a>.</p>
 </div>
 <div class="section" id="well-principled-design">
-<h3>Well principled design:<a class="headerlink" href="#well-principled-design" title="Permalink to this headline">¶</a></h3>
+<h1>Well principled design:<a class="headerlink" href="#well-principled-design" title="Permalink to this headline">¶</a></h1>
 <p>It is very important to ensure that the library code is pure. This has many advantages
 but, most importantly, it allows for the controlling of side-effects which is a primary concern,
 especially when randomness is involved. As a consequence of this, and other aspects, CIlib makes
@@ -198,8 +201,6 @@ researcher is important. When complexities such as randomness are involved, this
 difficult and is generally extremely cumbersome. CIlib, as a result, must allow for the perfect
 replication of experimental work.</li>
 </ul>
-</div>
-</div>
 <div class="section" id="project-structure">
 <h2>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
 <p>Trying to maintain a modular set of functionalities, CIlib consists of several sub-projects:</p>
@@ -258,7 +259,7 @@ replication of experimental work.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.0.0-M2',
+            VERSION:'2.0.0-M3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

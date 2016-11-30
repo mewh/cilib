@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Entity &mdash; CIlib 2.0.0-M2 documentation</title>
+  <title>Entity &mdash; CIlib 2.0.0-M3 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
 
   
-    <link rel="top" title="CIlib 2.0.0-M2 documentation" href="../index.html"/>
-        <link rel="next" title="RVar" href="rvar.html"/>
+    <link rel="top" title="CIlib 2.0.0-M3 documentation" href="../index.html"/>
+        <link rel="next" title="Lenses" href="lenses.html"/>
         <link rel="prev" title="Position" href="position.html"/> 
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.0.0-M2
+                2.0.0-M3
               </div>
             
           
@@ -89,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="position.html">Position</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Entity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lenses.html">Lenses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rvar.html">RVar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="step.html">Step</a></li>
 <li class="toctree-l1"><a class="reference internal" href="step_with_state.html">StepS</a></li>
@@ -168,12 +169,8 @@ velocity vector and a previous best position vector, an Individual, by contrast,
 manage no additional data.</p>
 <p>Because the value of <code class="docutils literal"><span class="pre">S</span></code> can be anything, it is not possible to have pre-defined functions
 that allow extraction of data from whatever type <code class="docutils literal"><span class="pre">S</span></code> may be. In order to enable this,
-a structure <code class="docutils literal"><span class="pre">Lens</span></code> was used. A <code class="docutils literal"><span class="pre">Lens</span></code> can be seen as a getter and setter function
-pair. Within CIlib, several common lenses are availble to extract information from the state
-of the <code class="docutils literal"><span class="pre">Entity</span></code>. <a class="reference external" href="http://julien-truffaut.github.io/Monocle/">Monocle</a> is used to provide
-the lens functionality. Lenses are strucutures that can also be composed together and are
-collectively called &#8220;optics&#8221;. Please refer to the documentation of Monocle to learn more about
-lenses and optics.</p>
+several <code class="docutils literal"><span class="pre">Lens</span></code> instances are used. Please refer to the section on <code class="docutils literal"><span class="pre">Lenses</span></code> for more information
+on their usage in CIlib.</p>
 </div>
 
 
@@ -183,7 +180,7 @@ lenses and optics.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rvar.html" class="btn btn-neutral float-right" title="RVar" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="lenses.html" class="btn btn-neutral float-right" title="Lenses" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="position.html" class="btn btn-neutral" title="Position" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -216,7 +213,7 @@ lenses and optics.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.0-M2',
+            VERSION:'2.0.0-M3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
