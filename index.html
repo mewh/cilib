@@ -1,290 +1,40 @@
+<html><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><title>CIlib</title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Verifiable Computational Intelligence" /><meta name="author" content="net.cilib" /><meta name="og:image" content="/cilib/img/poster.png" /><meta name="og:title" content="CIlib" /><meta name="og:site_name" content="CIlib" /><meta name="og:url" content="http://cirg-up.github.io" /><meta name="og:type" content="website" /><meta name="og:description" content="Verifiable Computational Intelligence" /><meta name="twitter:image" content="/cilib/img/poster.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="" /><link rel="icon" type="image/png" href="/cilib/img/favicon.png" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /><link rel="stylesheet" href="/cilib/highlight/styles/default.css" /><link rel="stylesheet" href="/cilib/css/style.css" /><link rel="stylesheet" href="/cilib/css/palette.css" /></head><body><header id="site-header"><div class="navbar-wrapper"><div class="container"><div class="row"><div class="col-xs-6"><a href="/cilib/" class="brand"><div class="icon-wrapper"><span>CIlib</span></div></a></div><div class="col-xs-6"><nav class="text-right"><ul class=""><li><a href="https://github.com/cirg-up/cilib"><i class="fa fa-github"></i><span class="hidden-xs">GitHub</span></a></li><li><a href="/cilib/docs"><i class="fa fa-file-text"></i><span class="hidden-xs">Documentation</span></a></li></ul></nav></div></div></div></div><div class="jumbotron"><div class="container"><h1 class="text-center">Verifiable Computational Intelligence</h1><h2></h2><p class="text-center"><a href="https://github.com/cirg-up/cilib" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                      </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><h1 id="cilib---computational-intelligence-library">CIlib - Computational Intelligence Library</h1>
 
+<p><a href="https://travis-ci.org/cirg-up/cilib"><img src="https://travis-ci.org/cirg-up/cilib.svg?branch=series%2F2.0.x" alt="Build Status" /></a>
+<a href="https://gitter.im/cirg-up/cilib?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/cirg-up/cilib" /></a></p>
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Welcome to CIlib’s documentation! &mdash; CIlib 2.0.0-M3 documentation</title>
-  
+<p>CIlib is a library of various computational intelligence
+algorithms. The goal of the project is to create a library that can be used
+and referenced by individuals and researchers alike.</p>
 
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="CIlib 2.0.0-M3 documentation" href="#"/>
-        <link rel="next" title="Overview" href="design/overview.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
-
-          
-            <a href="#" class="icon icon-home"> CIlib
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                2.0.0-M3
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
-<li class="toctree-l1"><a class="reference external" href="https://cirg-up.github.io/cilib/api/cilib">Scaladoc</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Design</span></p>
+<p>The goals of the project are:</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="design/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design/position.html">Position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design/entity.html">Entity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design/lenses.html">Lenses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design/rvar.html">RVar</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design/step.html">Step</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design/step_with_state.html">StepS</a></li>
+  <li>To provide a type-safe library, preventing as many runtime errors and
+invalid data representations as possible</li>
+  <li>Allow for the perfect reproduction of simulations, enabling researchers
+to validate and reuse previous work and published results with confidence</li>
+  <li>Enable composition, reducing the need to repeat implementations</li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+
+<p>CIlib is not a “framework”, instead the library is a set of a few very simple
+abstractions, and allows for a principled manner to define computational
+intelligence algorithms and uses several typeclasses such as <code class="highlighter-rouge">Functor</code> and
+<code class="highlighter-rouge">Monad</code>.</p>
+
+<h2 id="documentation-and-support">Documentation and Support</h2>
+
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/gbestpso.html">GBestPSO</a></li>
+  <li>Have a look a the <a href="https://cirg-up.github.io/cilib">website</a></li>
+  <li><a href="https://cirg-up.github.io/cilib/api/cilib">scaladoc</a></li>
+  <li>The source code of the project also contains several examples, have a look in the <code class="highlighter-rouge">example</code> directory</li>
+  <li>If you run into trouble, please open an issue</li>
+  <li>Come join in the discussion in <code class="highlighter-rouge">#cilib</code> on <code class="highlighter-rouge">FreeNode</code>, or join the <a href="https://gitter.im/cirg-up/cilib">Gitter channel</a></li>
 </ul>
 
-            
-          
-        </div>
-      </div>
-    </nav>
+<p>CIlib is maintained by several individuals and supported by CIRG @ UP (Computational Intelligence Research Group @ University of Pretoria).</p>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">CIlib</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
- 
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
-      
-    <li>Welcome to CIlib&#8217;s documentation!</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="welcome-to-cilib-s-documentation">
-<h1>Welcome to CIlib&#8217;s documentation!<a class="headerlink" href="#welcome-to-cilib-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last"><strong>CIlib is currently in active development.</strong> Feedback and contributions are welcomed as we work to improve the library.</p>
-</div>
-<div class="section" id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<p>CIlib is currently available for Scala 2.11 (builds for 2.12 are being planned).</p>
-<p>To get started, you need will need to include the required CIlib module into your project&#8217;s build.sbt</p>
-<blockquote>
-<div>libraryDependencies += &#8220;net.cilib&#8221; %% &#8220;cilib-<a href="#id1"><span class="problematic" id="id2">*</span></a>&#8221; % &#8220;&lt;version&gt;&#8221;</div></blockquote>
-<p>CIlib consists of several modules, each containing specialized parts of the larger library. Please refer to
-the project structure for a listing of each of the modules and what they provide. Additional dependencies
-on community projects include the following:</p>
-<table class="hlist"><tr><td><ul class="simple">
-<li><a class="reference external" href="https://github.com/scalaz/scalaz">Scalaz</a></li>
-</ul>
-</td><td><ul class="simple">
-<li><a class="reference external" href="https://github.com/non/spire">Spire</a></li>
-</ul>
-</td><td><ul class="simple">
-<li><a class="reference external" href="http://julien-truffaut.github.io/Monocle/">Monocle</a></li>
-</ul>
-</td></tr></table>
-</div>
-<div class="section" id="motivations">
-<h2>Motivations<a class="headerlink" href="#motivations" title="Permalink to this headline">¶</a></h2>
-<p>CIlib is software library which aids in the experimentation and research of
-Computational Intelligence algorithms. Previously, in version 1.0 and lower, CIlib
-started demonstrating several shortcomings, and as a result, the current
-development process began. In order to address these shortcomings, the following were
-highlighted:</p>
-</div>
-</div>
-<div class="section" id="approachability">
-<h1>Approachability:<a class="headerlink" href="#approachability" title="Permalink to this headline">¶</a></h1>
-<p>The learning needed to understand and use CIlib should remain as low as possible and the community
-around the library should continue to be a helpful and supportive group of individuals. Questions
-and contributions are always welcome, and the feedback will allow better decisions to be made which
-will hopefully allow faster understanding of the library itself. If you have any feedback for us, we would
-love to hear from you. Please contact is in <code class="docutils literal"><span class="pre">#cilib</span></code> on <code class="docutils literal"><span class="pre">FreeNode</span></code> or come chat to us
-in the project&#8217;s <a class="reference external" href="https://gitter.im/cirg-up/cilib">Gitter channel</a>; alternatively feel free to
-open an issue on the <a class="reference external" href="https://github.com/cirg-up/cilib">project page</a>.</p>
-</div>
-<div class="section" id="well-principled-design">
-<h1>Well principled design:<a class="headerlink" href="#well-principled-design" title="Permalink to this headline">¶</a></h1>
-<p>It is very important to ensure that the library code is pure. This has many advantages
-but, most importantly, it allows for the controlling of side-effects which is a primary concern,
-especially when randomness is involved. As a consequence of this, and other aspects, CIlib makes
-an active effort to address the following:</p>
-<ul class="simple">
-<li><strong>Correctness:</strong> All algorithmic components should be correct and operate as intended, doing nothing
-more. Peer-review is indispensable in this regard, providing confidence that the implementations are
-correct and sound.</li>
-<li><strong>Type safety:</strong> The use of types is a fantastic way to ensure that a program cannot represent
-invalid states. This removes a huge set of potential errors and ensures greater confidence, as the
-compiler is always double-checking the code.</li>
-<li><strong>Reproducability:</strong> Within scientific research, being able to reproduce the work of another
-researcher is important. When complexities such as randomness are involved, this becomes much more
-difficult and is generally extremely cumbersome. CIlib, as a result, must allow for the perfect
-replication of experimental work.</li>
-</ul>
-<div class="section" id="project-structure">
-<h2>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
-<p>Trying to maintain a modular set of functionalities, CIlib consists of several sub-projects:</p>
-<ul class="simple">
-<li><em>core</em> - contains typeclass definitions together with instances and various data structures</li>
-<li><em>exec</em> - simplistic execution code allowing for experimental execution</li>
-<li><em>de</em> - data structures and logic related to Differential Evolution</li>
-<li><em>ga</em> - data structures and logic related to Genetic Algorithms</li>
-<li><em>moo</em> - typeclasses, instances and data structures for Multi-Objective Optimization</li>
-<li><em>pso</em> - data structures and logic related to Particle Swarm Optimization</li>
-</ul>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound" id="design">
-</div>
-<div class="toctree-wrapper compound" id="examples">
-</div>
-</div>
-</div>
-
-
-           </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="design/overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2016, CIRG and contributors.
-
-    </p>
-  </div> 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.0.0-M3',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
-</html>
+</div></div></section><section class="technologies"><div class="container"><div class="row"></div></div></section></main><footer id="site-footer"><div class="container"><div class="row"><div class="col-xs-6"><p>CIlib is designed and developed by <a href="http://cirg-up.github.io" target="_blank">net.cilib</a></p></div><div class="col-xs-6"><p class="text-right"><a href="https://github.com/cirg-up/cilib"><span class="fa fa-github"></span>View on Github</a></p></div></div></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/cilib/highlight/highlight.pack.js"></script><script>hljs.configure({
+languages:['scala','java','bash']
+});
+hljs.initHighlighting();
+             </script></body></html>
