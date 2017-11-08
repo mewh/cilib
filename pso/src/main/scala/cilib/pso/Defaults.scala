@@ -9,7 +9,6 @@ import spire.implicits._
 import spire.math.sqrt
 import monocle._
 import algebra._
-import Comparison._
 
 object Defaults {
 
@@ -53,14 +52,19 @@ object Defaults {
     (newMain, subs)
   }
 
- def getRadius[S](sub: (GCParams,List[Particle[S, Double]])): Step[Double, Entity[S,Double]] = {
-   Step.liftK { comp =>
-     val globalBest = sub._2.reduce((a: Particle[S, Double], b: Particle[S, Double]) => if (Comparison.fittest(a, b).apply(comp)) a else b)
-     val distances = sub._2.map(p => Algebra.distance(p.pos, globalBest.pos))
+  def isBetter[S](a: Particle[S,Double], b: Particle[S,Double]): Comparison => Entity[S,Double] =
+    comp => if (Comparison.fittest(a,b).apply(comp)) a else b
 
-   }
+  def getRadius[S](sub: (GCParams,List[Particle[S, Double]])): Step[Double, Double] =
+    Step.liftK { comp =>
+      val globalBest: Particle[S,Double] =
+        sub._2.reduce((a,b) => isBetter(a,b).apply(comp))
 
- }
+      val distances =
+        sub._2.map(p => Algebra.distance(p.pos, globalBest.pos))
+
+      distances.max
+    }
 
   def niche[S](
                 w: Double,
@@ -105,7 +109,7 @@ object Defaults {
               gcPSO.apply(collection).run(gcparams)
             })
 
-            radii: List[Entity[S, Double]] <- subs.traverse(getRadius)
+            radii <- subs.traverse(getRadius)
 
           // merge subswarms, based on calculated radius
           // Absorb into subswarms from main swarm -> removes particles from main swarm
