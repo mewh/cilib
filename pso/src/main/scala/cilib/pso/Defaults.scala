@@ -66,6 +66,14 @@ object Defaults {
       distances.max
     }
 
+  def getSwarmBest[S](sub: (GCParams, List[Particle[S, Double]])) : Step[Double, Particle[S, Double]] =
+    Step.liftK { comp =>
+      val swarmBest : Particle[S,Double] =
+        sub._2.reduce((a,b) => isBetter(a,b).apply(comp))
+
+      swarmBest
+    }
+
   def niche[S](
                 w: Double,
                 c1: Double,
@@ -109,9 +117,57 @@ object Defaults {
               gcPSO.apply(collection).run(gcparams)
             })
 
-            radii <- subs.traverse(getRadius)
+            //shouldn't these be newSubs.traverse?
+            radii <- subs.traverse(getRadius) // radius of swarms
+            bestOfSwarms <- subs.traverse(getSwarmBest) // best of each swarm
 
-          // merge subswarms, based on calculated radius
+            //This returns:
+            // List[Multiple[GCParams,Particle[S,Double]]]
+            // but I want it to return
+            // List[(GCParams, List[Particle[S,Double]])]
+            // Compiler expects it to be a step for some reason...?
+            newerSubs = subs.zip(radii).zip(bestOfSwarms).map(x => {
+              val toBeMerged : List[Boolean] = subs.zip(radii).zip(bestOfSwarms).map(y => {
+                //calculation for merge: ||swarm1.best - swarm2.best|| < (swarm1.radius - swarm2.radius)
+                val ab_dist = Algebra.distance(x._2.pos, y._2.pos)
+                val radius_diff = x._1._2 - y._1._2
+                if (x._1._2 == 0 && y._1._2 == 0) {
+                  //TODO: normalize ab_dist to [0,1] so this works as expected
+                  ab_dist < 0.001  // if radii of both = 0 then this compares lbest of both
+                } else {
+                  ab_dist < radius_diff
+                }
+              })
+
+              val swarmsForMerge = subs.zip(toBeMerged).filter(x => x._2).map(x => x._1)
+              // How to handle GCParams???
+              // This won't be null because the swarm will merge with itself.
+              val gcparams = swarmsForMerge(0)._1
+              val mergedSwarm : (GCParams, List[Particle[S,Double]]) = (gcparams, swarmsForMerge.map(x => x._2).reduce((a,b) => a ++ b)) // Trying to do the same as reduce, line 72
+              //This will merge swarms, however merged swarms will be duplicates must make call to distinct
+              mergedSwarm
+            }).distinct
+
+            toBeDeleted: List[Boolean] = newMain.map(x => {
+              val absorbedTo : Boolean = subs.zip(radii).zip(bestOfSwarms).map(y => {
+                val xToY = Algebra.distance(x.pos, y._2.pos) // distance from particle in main to best in swarm
+                xToY <= y._1._2
+              }).reduceOption(_ || _).getOrElse(false)
+
+              absorbedTo
+            })
+            //deleted from mainswarm
+            newerMain = newMain.zip(toBeDeleted).filter(x => !x._2).map(x => x._1)
+
+            newestSubs : List[(GCParams, List[Particle[S,Double]])] = subs.zip(radii).zip(bestOfSwarms).map(x => {
+              val toBeAdded : List[Boolean] = newMain.map(y => {
+                val xToY = Algebra.distance(y.pos, x._2.pos)
+                xToY <= x._1._2
+              })
+
+              (x._1._1._1, x._1._1._2 ++ newMain.zip(toBeAdded).filter(z => !z._2).map(z => z._1)) // x._1((subs,radii))._1(subs)._1(gcparams)
+            })
+
           // Absorb into subswarms from main swarm -> removes particles from main swarm
           // Call createSubswam and do management for main swarm and the subswarms
           } yield Multiple(newMain, newSubs) // actually the final mainswarm and the old + new subswarms
@@ -137,6 +193,8 @@ object Defaults {
       p3      <- updateVelocity(p2, v)
       updated <- updatePBest(p3)
     } yield updated
+
+
 
   def cognitive[S](
     w: Double,
