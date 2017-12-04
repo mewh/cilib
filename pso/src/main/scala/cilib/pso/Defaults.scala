@@ -70,12 +70,7 @@ object Defaults {
     }
 
   def getSwarmBest[S](sub: (GCParams, List[Particle[S, Double]])) : Step[Double, Particle[S, Double]] =
-    Step.withCompare { comp =>
-      val swarmBest : Particle[S,Double] =
-        sub._2.reduce((a,b) => isBetter(a,b).apply(comp))
-
-      swarmBest
-    }
+    Step.withCompare { comp => sub._2.reduce((a,b) => isBetter(a,b).apply(comp)) }
 
   def niche[S](
                 w: Double,
