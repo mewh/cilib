@@ -9,6 +9,7 @@ import spire.implicits._
 import spire.math.sqrt
 import monocle._
 import algebra._
+import scala.collection.Set
 
 object Defaults {
 
@@ -39,14 +40,16 @@ object Defaults {
     val mu = (a + b + c) / 3.0
     val variance = ((a - mu) * (a - mu) + (b - mu) * (b - mu) + (c - mu) * (c - mu)) / 3.0
     sqrt(variance)
+    
   }
 
   def createSubswarm[S](xs: List[(Particle[S,Double], Boolean)]): (List[Particle[S,Double]], List[(GCParams,List[Particle[S,Double]])]) = {
     val newMain = xs.filter(x => !x._2).map(x => x._1)
     val subs: List[(GCParams,List[Particle[S,Double]])] = xs.filter(x => x._2).map(x => {
-      val withDistances = xs.map(p => (p._1, Algebra.distance(p._1.pos, x._1.pos)))
-      val otherParticle = withDistances.minBy(_._2)._1
-      (defaultGCParams, List(x._1, otherParticle))
+      val withDistances = xs.filter(p => p != x).map(p => ( Set(p._1, x._1) , Algebra.distance(p._1.pos, x._1.pos))).distinct
+      val closestPair = withDistances.minBy(_._2)._1.toList
+    
+      (defaultGCParams, closestPair)
     })
 
     (newMain, subs)
@@ -56,7 +59,7 @@ object Defaults {
     comp => if (Comparison.fittest(a,b).apply(comp)) a else b
 
   def getRadius[S](sub: (GCParams,List[Particle[S, Double]])): Step[Double, Double] =
-    Step.liftK { comp =>
+    Step.withCompare { comp =>
       val globalBest: Particle[S,Double] =
         sub._2.reduce((a,b) => isBetter(a,b).apply(comp))
 
@@ -67,7 +70,7 @@ object Defaults {
     }
 
   def getSwarmBest[S](sub: (GCParams, List[Particle[S, Double]])) : Step[Double, Particle[S, Double]] =
-    Step.liftK { comp =>
+    Step.withCompare { comp =>
       val swarmBest : Particle[S,Double] =
         sub._2.reduce((a,b) => isBetter(a,b).apply(comp))
 
@@ -92,14 +95,14 @@ object Defaults {
         case Single(main) =>
           for {
             newMain <- cogPSO.apply(main)
-            newMain2: List[Boolean] = newMain.map(particle => {
+            shouldFormSubs: List[Boolean] = newMain.map(particle => {
               val deviation: (Double,Double,Double) = D._deviation.get(particle.state)
               val c = calcDeviation(deviation)
               // TODO Normalise c according to the range of the search space, x_min, x_max
               c < delta
             })
           } yield {
-            val (m, s) = createSubswarm(newMain.zip(newMain2))
+            val (m, s) = createSubswarm(newMain.zip(shouldFormSubs))
             Multiple(m, s)
           }
 
