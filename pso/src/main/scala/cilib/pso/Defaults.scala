@@ -104,32 +104,29 @@ object Defaults {
         case Multiple(main, subs) =>
           val ss: Step[Double,NSwarms[GCParams,Particle[S,Double]]] = for {
             newMain <- cogPSO.apply(main)
-            newMain2: List[Boolean] = newMain.map(particle => {
-              val deviation: (Double,Double,Double) = D._deviation.get(particle.state)
-              val c = calcDeviation(deviation)
-              // TODO Normalise c according to the range of the search space, x_min, x_max
-              c < delta
-            })
+
+            // Apply GCPSO to each subswarm
             newSubs <- subs.traverse(x => {
               val (gcparams, collection) = x
               gcPSO.apply(collection).run(gcparams)
             })
 
-            //shouldn't these be newSubs.traverse?
-            radii <- subs.traverse(getRadius) // radius of swarms
-            bestOfSwarms <- subs.traverse(getSwarmBest) // best of each swarm
+            // Calculate the radii of subswarms
+            radii <- newSubs.traverse(getRadius)
+            // Calculate best particles for each subswarm
+            bestOfSwarms <- newSubs.traverse(getSwarmBest)
 
-            //This returns:
-            // List[Multiple[GCParams,Particle[S,Double]]]
-            // but I want it to return
-            // List[(GCParams, List[Particle[S,Double]])]
-            // Compiler expects it to be a step for some reason...?
-            newerSubs = subs.zip(radii).zip(bestOfSwarms).map(x => {
-              val toBeMerged : List[Boolean] = subs.zip(radii).zip(bestOfSwarms).map(y => {
-                //calculation for merge: ||swarm1.best - swarm2.best|| < (swarm1.radius - swarm2.radius)
+            // Merge subswarms
+            zipped = newSubs.zip(radii).zip(bestOfSwarms)
+            newerSubs = zipped.map(x => {
+
+              val toBeMerged : List[Boolean] = zipped.map(y => {
+                // Calculation for merge: ||swarm1.best - swarm2.best|| < (swarm1.radius - swarm2.radius)
                 val ab_dist = Algebra.distance(x._2.pos, y._2.pos)
-                val radius_diff = x._1._2 - y._1._2
-                if (x._1._2 == 0 && y._1._2 == 0) {
+                val xRad = x._1._2
+                val yRad = y._1._2
+                val radius_diff = xRad - yRad
+                if (xRad == 0 && yRad == 0) {
                   //TODO: normalize ab_dist to [0,1] so this works as expected
                   ab_dist < 0.001  // if radii of both = 0 then this compares lbest of both
                 } else {
@@ -137,38 +134,54 @@ object Defaults {
                 }
               })
 
-              val swarmsForMerge = subs.zip(toBeMerged).filter(x => x._2).map(x => x._1)
-              // How to handle GCParams???
-              // This won't be null because the swarm will merge with itself.
-              val gcparams = swarmsForMerge(0)._1
-              val mergedSwarm : (GCParams, List[Particle[S,Double]]) = (gcparams, swarmsForMerge.map(x => x._2).reduce((a,b) => a ++ b)) // Trying to do the same as reduce, line 72
-              //This will merge swarms, however merged swarms will be duplicates must make call to distinct
+              val swarmsForMerge = newSubs.zip(toBeMerged).filter(x => x._2).map(x => x._1)
+              // TODO: How to handle GCParams? For now choose first subswarm's
+              // This won't be null because the swarm will merge with itself
+              val gcparams = swarmsForMerge.head._1
+              val mergedSwarm : (GCParams, List[Particle[S,Double]]) =
+                (gcparams, swarmsForMerge.map(x => x._2).reduce((a,b) => a ++ b))
+              // This will merge swarms, however merged swarms will contain duplicates so must call distinct
               mergedSwarm
             }).distinct
 
-            toBeDeleted: List[Boolean] = newMain.map(x => {
-              val absorbedTo : Boolean = subs.zip(radii).zip(bestOfSwarms).map(y => {
+            // Absorb into subswarms from main swarm
+            newestSubs : List[(GCParams, List[Particle[S,Double]])] = newerSubs.zip(radii).zip(bestOfSwarms).map(x => {
+              val toBeAdded : List[Boolean] = newMain.map(y => {
+                val rad = x._1._2
+                val xToY = Algebra.distance(y.pos, x._2.pos)
+                xToY <= rad
+              })
+              val gcParams = x._1._1._1
+              val oldSub = x._1._1._2
+              (gcParams, oldSub ++ newMain.zip(toBeAdded).filter(z => z._2).map(z => z._1)) // x._1((subs,radii))._1(subs)._1(gcparams)
+            })
+
+          // Call createSubswam and do management for main swarm and the subswarms
+
+          } yield {
+            // Removes particles from main swarm
+            val toBeDeleted: List[Boolean] = newMain.map(x => {
+              val absorbedTo : Boolean = zipped.map(y => {
                 val xToY = Algebra.distance(x.pos, y._2.pos) // distance from particle in main to best in swarm
                 xToY <= y._1._2
               }).reduceOption(_ || _).getOrElse(false)
 
               absorbedTo
             })
-            //deleted from mainswarm
-            newerMain = newMain.zip(toBeDeleted).filter(x => !x._2).map(x => x._1)
+            // Removed from main swarm
+            val newerMain = newMain.zip(toBeDeleted).filter(x => !x._2).map(x => x._1)
 
-            newestSubs : List[(GCParams, List[Particle[S,Double]])] = subs.zip(radii).zip(bestOfSwarms).map(x => {
-              val toBeAdded : List[Boolean] = newMain.map(y => {
-                val xToY = Algebra.distance(y.pos, x._2.pos)
-                xToY <= x._1._2
-              })
-
-              (x._1._1._1, x._1._1._2 ++ newMain.zip(toBeAdded).filter(z => !z._2).map(z => z._1)) // x._1((subs,radii))._1(subs)._1(gcparams)
+            val shouldFormSubs: List[Boolean] = newerMain.map(particle => {
+              val deviation: (Double, Double, Double) = D._deviation.get(particle.state)
+              val c = calcDeviation(deviation)
+              // TODO Normalise c according to the range of the search space, x_min, x_max
+              c < delta
             })
 
-          // Absorb into subswarms from main swarm -> removes particles from main swarm
-          // Call createSubswam and do management for main swarm and the subswarms
-          } yield Multiple(newMain, newSubs) // actually the final mainswarm and the old + new subswarms
+            val (m, s) = createSubswarm(newerMain.zip(shouldFormSubs))
+
+            Multiple(m, newestSubs ++ s) // final mainswarm and the old + new subswarms
+          }
 
           ss
       }
