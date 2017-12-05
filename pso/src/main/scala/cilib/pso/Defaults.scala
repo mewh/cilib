@@ -77,8 +77,9 @@ object Defaults {
                 c1: Double,
                 guide: Guide[S,Double],
                 delta: Double,
-                dist: (Particle[S,Double], Particle[S,Double]) => Double
-              )(implicit M: HasMemory[S,Double], V: HasVelocity[S,Double], D: HasDeviation[S,Double]): NSwarms[GCParams,Particle[S,Double]] => Step[Double,NSwarms[GCParams,Particle[S,Double]]] =
+                mu: Double = 0.001
+              )(implicit M: HasMemory[S,Double], V: HasVelocity[S,Double], D: HasDeviation[S,Double]):
+              NSwarms[GCParams,Particle[S,Double]] => Step[Double,NSwarms[GCParams,Particle[S,Double]]] =
     swarm => {
       val cogPSO: List[Particle[S,Double]] => Step[Double, List[Particle[S,Double]]] =
         Iteration.sync(cognitive(w, c1, guide))
@@ -128,7 +129,7 @@ object Defaults {
                 val radius_diff = xRad - yRad
                 if (xRad == 0 && yRad == 0) {
                   //TODO: normalize ab_dist to [0,1] so this works as expected
-                  ab_dist < 0.001  // if radii of both = 0 then this compares lbest of both
+                  ab_dist < mu  // if radii of both = 0 then this compares lbest of both
                 } else {
                   ab_dist < radius_diff
                 }
