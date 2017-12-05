@@ -1,8 +1,3 @@
----
-layout: docs
-title: "Step"
----
-
 ```tut:invisible
 import cilib._
 import cilib.pso._

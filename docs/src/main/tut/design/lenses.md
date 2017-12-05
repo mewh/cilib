@@ -1,8 +1,3 @@
----
-layout: docs
-title: "Lenses"
----
-
 # Immutable data
 
 Immutable data is fantastic because it allows anyone to read the contents
