@@ -216,7 +216,7 @@ lazy val docSettings = Seq(
   siteSubdirName in SiteScaladoc := "api",
   unidocProjectFilter in (ScalaUnidoc, unidoc) := inAnyProject -- inProjects(example),
   addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), siteSubdirName in SiteScaladoc),
-  git.remoteRepo := scmInfo.value.map(_.connection).getOrElse(sys.error("Unable to lookup the scm url")),
+  git.remoteRepo := scmInfo.value.map(_.browseUrl.toString).getOrElse(sys.error("Unable to lookup the scm url")),
   siteStageDirectory := target.value / "site-stage",
   sourceDirectory in paradox in Paradox := siteStageDirectory.value,
   sourceDirectory in paradox  := siteStageDirectory.value,
@@ -225,10 +225,15 @@ lazy val docSettings = Seq(
       .withLogo("img/sbt-logo.svg")
       .withRepository(uri("https://github.com/cirg-up/cilib"))
   },
-  version in Paradox := {
-    if (isSnapshot.value) "git tag -l".!!.split("\r?\n").last.substring(1) // TODO: replace this with jgit / sbt git
-    else version.value
-  },
+ // version in Paradox := {
+ //   val git = GitKeys.gitRunner.value
+ //   val s = streams.value
+
+//    if (isSnapshot.value) git("tag" :: "-l" :: Nil)(, s.log) //"git tag -l".!!.split("\r?\n").last.substring(1) // TODO: replace this with jgit / sbt git
+//    else version.value
+
+//version.value
+//  },
   copySiteToStage := {
     IO.copyDirectory(
       source = sourceDirectory.value / "main" / "paradox",
