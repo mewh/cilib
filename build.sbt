@@ -185,11 +185,7 @@ lazy val core = project
       Wart.Return,
       Wart.Serializable,
       Wart.Var*/
-    ),
-    initialCommands in console := """
-    |import scalaz._
-    |import Scalaz._
-    |import cilib._    |""".stripMargin
+    )
   ))
 
 val siteStageDirectory    = SettingKey[File]("site-stage-directory")
@@ -197,7 +193,6 @@ val copySiteToStage       = TaskKey[Unit]("copy-site-to-stage")
 
 lazy val docs = project.in(file("docs"))
   .enablePlugins(GhpagesPlugin, TutPlugin, ParadoxSitePlugin, ParadoxMaterialThemePlugin, ScalaUnidocPlugin)
-  .settings((scalacOptions in Tut) ~= (_.filterNot(Set("-Ywarn-unused-import", "-Ywarn-dead-code"))))
   .settings(ParadoxMaterialThemePlugin.paradoxMaterialThemeSettings(Paradox))
   .settings(moduleName := "cilib-docs")
   .settings(cilibSettings)
@@ -208,6 +203,8 @@ lazy val docs = project.in(file("docs"))
 lazy val docSettings = Seq(
   fork in tut := true,
   tutSourceDirectory := sourceDirectory.value / "main" / "tut",
+  scalacOptions in Tut ~= (_.filterNot(Set("-Ywarn-unused:imports", "-Ywarn-dead-code"))),
+  git.remoteRepo := "git@github.com:cirg-up/cilib.git",
   ghpagesNoJekyll := true,
   excludeFilter in ghpagesCleanSite :=
     new FileFilter {
@@ -216,7 +213,6 @@ lazy val docSettings = Seq(
   siteSubdirName in SiteScaladoc := "api",
   unidocProjectFilter in (ScalaUnidoc, unidoc) := inAnyProject -- inProjects(example),
   addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), siteSubdirName in SiteScaladoc),
-  git.remoteRepo := scmInfo.value.map(_.browseUrl.toString).getOrElse(sys.error("Unable to lookup the scm url")),
   siteStageDirectory := target.value / "site-stage",
   sourceDirectory in paradox in Paradox := siteStageDirectory.value,
   sourceDirectory in paradox  := siteStageDirectory.value,
@@ -225,15 +221,9 @@ lazy val docSettings = Seq(
       .withLogo("img/sbt-logo.svg")
       .withRepository(uri("https://github.com/cirg-up/cilib"))
   },
- // version in Paradox := {
- //   val git = GitKeys.gitRunner.value
- //   val s = streams.value
-
-//    if (isSnapshot.value) git("tag" :: "-l" :: Nil)(, s.log) //"git tag -l".!!.split("\r?\n").last.substring(1) // TODO: replace this with jgit / sbt git
-//    else version.value
-
-//version.value
-//  },
+  paradoxProperties in Compile ++= Map(
+    "github.base_url" -> s"https://github.com/cirg-up/cilib/tree/series/2.0.x/${version.value}"
+  ),
   copySiteToStage := {
     IO.copyDirectory(
       source = sourceDirectory.value / "main" / "paradox",
@@ -257,7 +247,7 @@ lazy val credentialSettings = Seq(
   } yield Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)).toSeq
 )
 
-lazy val example = project.dependsOn(core, exec, ga, moo, pso)
+lazy val example = project.dependsOn(core, exec, ga, io, moo, pso)
   .settings(cilibSettings ++ noPublishSettings ++ Seq(
     fork in run := true,
     moduleName := "cilib-example",
@@ -289,8 +279,22 @@ lazy val tests = project
   .dependsOn(core, pso, ga, moo)
   .settings(cilibSettings ++ noPublishSettings ++ Seq(
     moduleName := "cilib-tests",
+    fork in test := true,
+    javaOptions in test += "-Xmx1G",
     libraryDependencies ++= Seq(
       "org.scalacheck" %% "scalacheck"                % scalacheckVersion % "test",
       "org.scalaz"     %% "scalaz-scalacheck-binding" % scalazVersion     % "test"
+    )
+  ))
+
+lazy val io = project
+  .dependsOn(core)
+  .settings(cilibSettings ++ noPublishSettings ++ Seq(
+    moduleName := "cilib-io",
+    libraryDependencies ++= Seq(
+      "com.chuusai"    %% "shapeless" % "2.3.2",
+      "org.apache.orc"  % "orc-core"  % "1.3.3",
+      "com.sksamuel.avro4s" %% "avro4s-core" % "1.8.0",
+      "org.apache.parquet" % "parquet-avro" % "1.8.2"
     )
   ))
